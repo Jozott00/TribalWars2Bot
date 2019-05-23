@@ -17,11 +17,8 @@ function createRequest(type, id, data) {
   jsonRequest = 42 + JSON.stringify(request);
 
   ws.send(jsonRequest);
-  //return jsonRequest;
 }
 
-// const testData = { name: "joza2017", pass: "password" };
-// createRequest("Authentication/login", 2, testData);
 
 module.exports = {
   updateWs,

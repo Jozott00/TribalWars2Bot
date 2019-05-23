@@ -17,6 +17,7 @@ global.uUsername = read.settings(global.username);
 global.uPassword = read.settings(global.password);
 global.uToken = read.settings(global.userToken);
 global.uPlayerID = read.settings(global.playerID);
+global.uVillageID = read.settings("villageId");
 
 //requestTypes
 global.rLoginType = "Authentication/login";
@@ -44,6 +45,18 @@ global.rUpgradeClayData = {
 };
 global.rUpgradeTimberData = {
   building: "timber_camp",
+  location: "menu",
+  premium: false,
+  village_id: 9571
+};
+global.rUpgradeIronData = {
+  building: "iron_mine",
+  location: "menu",
+  premium: false,
+  village_id: 9571
+};
+global.rUpgradeFarmData = {
+  building: "farm",
   location: "menu",
   premium: false,
   village_id: 9571

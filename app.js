@@ -6,10 +6,11 @@ const read = require("./readfile");
 const helpers = require("./helpers");
 const keys = require("./keywords");
 const request = require("./request");
+const controller = require("./controller");
 ///////////////////
 
-const server = express();
-server.listen(3000);
+// const server = express();
+// server.listen(3000);
 
 helpers.fileExCheck();
 helpers.setup();
@@ -78,7 +79,7 @@ ws.on("message", function incoming(data) {
           global.rVillageResourceData
         );
       } else if (obj[1].type === "VillageBatch/villageData") {
-        console.log("got all resource informations");
+        controller.controller(objData);
       } else {
       }
     } else {
