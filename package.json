@@ -1,0 +1,26 @@
+{
+  "name": "tribalwars-bot",
+  "version": "1.0.0",
+  "description": "A bot for the Browsergame Tribal Wars",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "keywords": [
+    "bot",
+    "tribalwars",
+    "nodejs"
+  ],
+  "author": "Johannes Zottele",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.0",
+    "request": "^2.88.0",
+    "underscore": "^1.9.1",
+    "ws": "^7.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.0"
+  }
+}
