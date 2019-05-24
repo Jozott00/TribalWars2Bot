@@ -13,12 +13,13 @@ const request = new Array("msg", {
 function createRequest(type, id, data) {
   if (type != null) request[1].type = type;
   if (id != null) request[1].id = id;
-  if (id != null) request[1].data = data;
+  if (data != null) request[1].data = data;
   jsonRequest = 42 + JSON.stringify(request);
 
   ws.send(jsonRequest);
+  console.log("SENDING  ... " + jsonRequest);
+  console.log();
 }
-
 
 module.exports = {
   updateWs,

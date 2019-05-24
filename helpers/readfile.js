@@ -2,7 +2,7 @@ const fs = require("fs");
 let obj = {};
 let result = "";
 
-const settings = fs.readFileSync("settings.json", "utf8");
+const settings = fs.readFileSync("./data/settings.json", "utf8");
 
 function readSettings(key) {
   obj = JSON.parse(settings);

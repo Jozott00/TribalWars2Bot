@@ -3,7 +3,7 @@ const fs = require("fs");
 const write = require("./writefile");
 const read = require("./readfile");
 const keys = require("./keywords");
-const request = require("./request");
+const request = require("../models/request");
 
 const username = "joza2017";
 const password = "password";
@@ -34,6 +34,7 @@ function setup() {
 const getVillageInfo = dataObj => {
   const villageID = global.uVillageID;
   const villageInfo = dataObj[villageID]["Village/village"];
+  const villageQueue = dataObj[villageID]["Building/queue"].queue;
   const storage = villageInfo.storage;
   const resources = {
     wood: villageInfo.resources.wood,
@@ -42,52 +43,22 @@ const getVillageInfo = dataObj => {
     food: villageInfo.resources.food
   };
   const farmBuildingLevel = {
-    timberCamp: villageInfo.buildings.timber_camp.level,
-    clayPit: villageInfo.buildings.clay_pit.level,
-    ironMine: villageInfo.buildings.iron_mine.level,
-    farm: villageInfo.buildings.farm.level
+    timber_camp: villageInfo.buildings.timber_camp.level,
+    clay_pit: villageInfo.buildings.clay_pit.level,
+    iron_mine: villageInfo.buildings.iron_mine.level
+    //farm: villageInfo.buildings.farm.level
   };
-
-  return { storage, resources, farmBuildingLevel };
-};
-
-//Farm Buildings Upgrade Call
-const timberCampUpgrade = () => {
-  request.createRequest(
-    global.rBuildingUpgradeType,
-    29,
-    global.rUpgradeTimberData
-  );
-};
-const clayPitUpgrade = () => {
-  request.createRequest(
-    global.rBuildingUpgradeType,
-    30,
-    global.rUpgradeClayData
-  );
-};
-const ironMineUpgrade = () => {
-  request.createRequest(
-    global.rBuildingUpgradeType,
-    31,
-    global.rUpgradeIronData
-  );
-};
-const farmUpgrade = () => {
-  request.createRequest(
-    global.rBuildingUpgradeType,
-    32,
-    global.global.rUpgradeFarmData
-  );
+  const queueBuildings = [];
+  let c = 0;
+  for (key in villageQueue) {
+    queueBuildings.push(villageQueue[c].building);
+  }
+  return { storage, resources, farmBuildingLevel, queueBuildings };
 };
 
 module.exports = {
   setup,
   getVillageInfo,
   keyExCheck,
-  fileExCheck,
-  timberCampUpgrade,
-  clayPitUpgrade,
-  ironMineUpgrade,
-  farmUpgrade
+  fileExCheck
 };
