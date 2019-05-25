@@ -1,0 +1,4288 @@
+{
+  "GameData/baseData": {
+    "resource_production": 20,
+    "storage_capacity": 0,
+    "population_limit": 0,
+    "hospital_healing_duration": 21600,
+    "resource_boost_duration": 604800,
+    "resource_boost_value": 0.2,
+    "instant_trade_ratio": 1,
+    "cancel_command_duration": 300,
+    "spy_speed": 10,
+    "loot_protection_duration": 604800,
+    "loot_protection_value": 0.5,
+    "luck_min": 85,
+    "luck_max": 115,
+    "nobleman_effect_min": 20,
+    "nobleman_effect_max": 35,
+    "reset_order_resources": {
+      "wood": 200000,
+      "clay": 200000,
+      "iron": 200000,
+      "food": 0
+    },
+    "show_daily_bonus_after_login_nr": 3,
+    "show_second_village_after_login_nr": 1,
+    "exp_to_level_exponent": 3.5,
+    "exp_to_level_factor": 100,
+    "crown_to_exp_exponent": 2.5,
+    "resource_to_exp_factor": 100,
+    "knight_relocation_time": 21600
+  },
+  "GameData/costsPerCoin": {
+    "wood": 28000,
+    "clay": 30000,
+    "iron": 25000,
+    "food": 0
+  },
+  "GameData/research": {
+    "support_columns": {
+      "type": "support_columns",
+      "description": "Increases hitpoints by 50%.",
+      "required_level": 18,
+      "building": "headquarter"
+    },
+    "training_ground": {
+      "type": "training_ground",
+      "description": "Increases discipline by 33%.",
+      "required_level": 7,
+      "building": "barracks",
+      "function": 3
+    },
+    "sergeant": {
+      "type": "sergeant",
+      "description": "Increases recruit time by 5%.",
+      "required_level": 10,
+      "building": "barracks",
+      "function": 0.05
+    },
+    "large_ground": {
+      "type": "large_ground",
+      "description": "Increases discipline by 33%.",
+      "required_level": 14,
+      "building": "barracks",
+      "function": 3
+    },
+    "fortified_roof": {
+      "type": "fortified_roof",
+      "description": "Increases hitpoints by 50%.",
+      "required_level": 16,
+      "building": "barracks",
+      "function": 0.5
+    },
+    "lieutenant": {
+      "type": "lieutenant",
+      "description": "Increases recruit time by 10%.",
+      "required_level": 20,
+      "building": "barracks",
+      "function": 0.1
+    },
+    "military_academy": {
+      "type": "military_academy",
+      "description": "Increases discipline by 33%.",
+      "required_level": 23,
+      "building": "barracks",
+      "function": 3
+    },
+    "captain": {
+      "type": "captain",
+      "description": "Increases recruit time by 15%.",
+      "required_level": 25,
+      "building": "barracks",
+      "function": 0.15
+    },
+    "camouflage": {
+      "type": "camouflage",
+      "description": "Unlocks Camouflage counter measure.",
+      "required_level": 3,
+      "building": "tavern"
+    },
+    "switch_weapons": {
+      "type": "switch_weapons",
+      "description": "Unlocks switch weapon counter measure.",
+      "required_level": 6,
+      "building": "tavern"
+    },
+    "dummies": {
+      "type": "dummies",
+      "description": "Unlocks dummies counter measure.",
+      "required_level": 9,
+      "building": "tavern"
+    },
+    "exchange": {
+      "type": "exchange",
+      "description": "Unlocks exchange counter measure.",
+      "required_level": 12,
+      "building": "tavern"
+    },
+    "homeguard": {
+      "type": "homeguard",
+      "description": "Better defense against sabotage.",
+      "required_level": 14,
+      "building": "tavern"
+    },
+    "veterinary": {
+      "type": "veterinary",
+      "description": "Cavalry units can be restored.",
+      "required_level": 10,
+      "building": "hospital"
+    },
+    "structural_improvement": {
+      "type": "structural_improvement",
+      "description": "Increases hitpoints by 50%.",
+      "required_level": 10,
+      "building": "preceptory"
+    },
+    "war_planner": {
+      "type": "war_planner",
+      "description": "Extends the time to recall armies from an operation from 5 to 10 minutes.",
+      "required_level": 5,
+      "building": "rally_point",
+      "function": 2
+    },
+    "forced_march": {
+      "type": "forced_march",
+      "description": "If the paladin leads a support operation, the army will move at cavalry speed.",
+      "required_level": 2,
+      "building": "statue"
+    },
+    "faithful_paladin": {
+      "type": "faithful_paladin",
+      "description": "Attacking armies accompanied by the paladin always fight at full strength even without a church.",
+      "required_level": 5,
+      "building": "statue"
+    },
+    "cart": {
+      "type": "cart",
+      "description": "Merchants can travel further than 5h.",
+      "required_level": 5,
+      "building": "market",
+      "function": 864000
+    },
+    "delivery": {
+      "type": "delivery",
+      "description": "The player can send resources to other villages.",
+      "required_level": 20,
+      "building": "market"
+    },
+    "attic": {
+      "type": "attic",
+      "description": "300 resources are protected from theft.",
+      "required_level": 3,
+      "building": "warehouse",
+      "function": 300
+    },
+    "cellar": {
+      "type": "cellar",
+      "description": "700 resources are protected from theft.",
+      "required_level": 6,
+      "building": "warehouse",
+      "function": 700
+    },
+    "bunker": {
+      "type": "bunker",
+      "description": "1500 resources are protected from theft.",
+      "required_level": 9,
+      "building": "warehouse",
+      "function": 1500
+    },
+    "fortified_walls": {
+      "type": "fortified_walls",
+      "description": "Increase hitpoints by 50%. ",
+      "required_level": 20,
+      "building": "warehouse"
+    },
+    "arrow_loop": {
+      "type": "arrow_loop",
+      "description": "Decrease wall building time by 5%",
+      "required_level": 8,
+      "building": "wall",
+      "function": 0.05
+    },
+    "battlement": {
+      "type": "battlement",
+      "description": "Decrease wall building time by 10%",
+      "required_level": 15,
+      "building": "wall",
+      "function": 0.1
+    }
+  },
+  "GameData/buildings": {
+    "headquarter": {
+      "id": "headquarter",
+      "image": "images/headquarter.png",
+      "description": "The one and only headquarter. Used for construction. Building level decreases construction time for buildings.",
+      "required_level": 1,
+      "max_level": 30,
+      "min_level": 1,
+      "wood": 90,
+      "wood_factor": 1.26,
+      "clay": 80,
+      "clay_factor": 1.275,
+      "iron": 70,
+      "iron_factor": 1.26,
+      "food": 5,
+      "food_factor": 1.17,
+      "build_time": 1800,
+      "build_time_factor": 1.22,
+      "build_time_offset": -6,
+      "hitpoints": 3,
+      "hitpoints_factor": 1.1,
+      "function": 1,
+      "function_factor": 1,
+      "points": 10,
+      "points_factor": 1.2,
+      "building_type": "speedup",
+      "order": 1,
+      "individual_level_costs": {
+        "1": {
+          "wood": "500",
+          "clay": "550",
+          "iron": "450",
+          "food": "1",
+          "build_time": "30"
+        },
+        "2": {
+          "wood": "700",
+          "clay": "750",
+          "iron": "650",
+          "food": "1",
+          "build_time": "120"
+        },
+        "3": {
+          "wood": "1000",
+          "clay": "1300",
+          "iron": "900",
+          "food": "1",
+          "build_time": "180"
+        },
+        "4": {
+          "wood": "1400",
+          "clay": "1500",
+          "iron": "1300",
+          "food": "1",
+          "build_time": "300"
+        },
+        "5": {
+          "wood": "1900",
+          "clay": "2000",
+          "iron": "1800",
+          "food": "1",
+          "build_time": "420"
+        },
+        "6": {
+          "wood": "2300",
+          "clay": "2500",
+          "iron": "2100",
+          "food": "2",
+          "build_time": "540"
+        },
+        "7": {
+          "wood": "2800",
+          "clay": "3000",
+          "iron": "2600",
+          "food": "2",
+          "build_time": "720"
+        },
+        "8": {
+          "wood": "3800",
+          "clay": "4000",
+          "iron": "3600",
+          "food": "2",
+          "build_time": "900"
+        },
+        "9": {
+          "wood": "4800",
+          "clay": "5000",
+          "iron": "4600",
+          "food": "3",
+          "build_time": "1080"
+        },
+        "10": {
+          "wood": "5600",
+          "clay": "6000",
+          "iron": "5200",
+          "food": "3",
+          "build_time": "1260"
+        },
+        "11": {
+          "wood": "7600",
+          "clay": "8000",
+          "iron": "7200",
+          "food": "3",
+          "build_time": "1500"
+        },
+        "12": {
+          "wood": "9000",
+          "clay": "10000",
+          "iron": "8000",
+          "food": "4",
+          "build_time": "1800"
+        },
+        "13": {
+          "wood": "14000",
+          "clay": "15000",
+          "iron": "13000",
+          "food": "5",
+          "build_time": "2100"
+        },
+        "14": {
+          "wood": "19000",
+          "clay": "20000",
+          "iron": "18000",
+          "food": "5",
+          "build_time": "2700"
+        },
+        "15": {
+          "wood": "23000",
+          "clay": "25000",
+          "iron": "20000",
+          "food": "7",
+          "build_time": "3600"
+        },
+        "16": {
+          "wood": "27000",
+          "clay": "30000",
+          "iron": "22000",
+          "food": "8",
+          "build_time": "5400"
+        },
+        "17": {
+          "wood": "31000",
+          "clay": "35000",
+          "iron": "24000",
+          "food": "9",
+          "build_time": "7200"
+        },
+        "18": {
+          "wood": "35000",
+          "clay": "40000",
+          "iron": "26000",
+          "food": "10",
+          "build_time": "10800"
+        },
+        "19": {
+          "wood": "38000",
+          "clay": "45000",
+          "iron": "28000",
+          "food": "12",
+          "build_time": "14400"
+        },
+        "20": {
+          "wood": "40000",
+          "clay": "50000",
+          "iron": "30000",
+          "food": "15",
+          "build_time": "18000"
+        },
+        "21": {
+          "wood": "42000",
+          "clay": "55000",
+          "iron": "32000",
+          "food": "17",
+          "build_time": "21600"
+        },
+        "22": {
+          "wood": "44000",
+          "clay": "60000",
+          "iron": "34000",
+          "food": "19",
+          "build_time": "25200"
+        },
+        "23": {
+          "wood": "46000",
+          "clay": "65000",
+          "iron": "36000",
+          "food": "23",
+          "build_time": "28800"
+        },
+        "24": {
+          "wood": "48000",
+          "clay": "70000",
+          "iron": "38000",
+          "food": "27",
+          "build_time": "32400"
+        },
+        "25": {
+          "wood": "50000",
+          "clay": "75000",
+          "iron": "40000",
+          "food": "31",
+          "build_time": "36000"
+        },
+        "26": {
+          "wood": "53000",
+          "clay": "80000",
+          "iron": "42000",
+          "food": "37",
+          "build_time": "39600"
+        },
+        "27": {
+          "wood": "56000",
+          "clay": "85000",
+          "iron": "44000",
+          "food": "43",
+          "build_time": "43200"
+        },
+        "28": {
+          "wood": "59000",
+          "clay": "90000",
+          "iron": "46000",
+          "food": "51",
+          "build_time": "46800"
+        },
+        "29": {
+          "wood": "62000",
+          "clay": "95000",
+          "iron": "48000",
+          "food": "59",
+          "build_time": "50400"
+        },
+        "30": {
+          "wood": "65000",
+          "clay": "100000",
+          "iron": "50000",
+          "food": "69",
+          "build_time": "54000"
+        }
+      }
+    },
+    "barracks": {
+      "id": "barracks",
+      "image": "images/barracks.png",
+      "description": "Allows recruiting of units. Building level decreases recruiting time for units.",
+      "required_level": 2,
+      "max_level": 25,
+      "min_level": 0,
+      "wood": 200,
+      "wood_factor": 1.25,
+      "clay": 170,
+      "clay_factor": 1.275,
+      "iron": 190,
+      "iron_factor": 1.25,
+      "food": 7,
+      "food_factor": 1.2,
+      "build_time": 3800,
+      "build_time_factor": 1.21,
+      "build_time_offset": -35,
+      "hitpoints": 3,
+      "hitpoints_factor": 1.1,
+      "function": 1,
+      "function_factor": 1,
+      "points": 16,
+      "points_factor": 1.2,
+      "building_type": "speedup",
+      "order": 10,
+      "individual_level_costs": {
+        "1": {
+          "wood": "400",
+          "clay": "500",
+          "iron": "600",
+          "food": "7",
+          "build_time": "60"
+        },
+        "2": {
+          "wood": "480",
+          "clay": "600",
+          "iron": "720",
+          "food": "1",
+          "build_time": "150"
+        },
+        "3": {
+          "wood": "580",
+          "clay": "720",
+          "iron": "860",
+          "food": "2",
+          "build_time": "240"
+        },
+        "4": {
+          "wood": "700",
+          "clay": "860",
+          "iron": "1030",
+          "food": "2",
+          "build_time": "330"
+        },
+        "5": {
+          "wood": "840",
+          "clay": "1030",
+          "iron": "1240",
+          "food": "3",
+          "build_time": "420"
+        },
+        "6": {
+          "wood": "1800",
+          "clay": "2000",
+          "iron": "2200",
+          "food": "2",
+          "build_time": "510"
+        },
+        "7": {
+          "wood": "2200",
+          "clay": "2400",
+          "iron": "2600",
+          "food": "4",
+          "build_time": "600"
+        },
+        "8": {
+          "wood": "2600",
+          "clay": "2900",
+          "iron": "3100",
+          "food": "4",
+          "build_time": "720"
+        },
+        "9": {
+          "wood": "3100",
+          "clay": "3500",
+          "iron": "3700",
+          "food": "5",
+          "build_time": "840"
+        },
+        "10": {
+          "wood": "3700",
+          "clay": "4200",
+          "iron": "4400",
+          "food": "6",
+          "build_time": "960"
+        },
+        "11": {
+          "wood": "6000",
+          "clay": "7000",
+          "iron": "8000",
+          "food": "7",
+          "build_time": "1080"
+        },
+        "12": {
+          "wood": "7200",
+          "clay": "8400",
+          "iron": "9600",
+          "food": "9",
+          "build_time": "1200"
+        },
+        "13": {
+          "wood": "8600",
+          "clay": "10100",
+          "iron": "11500",
+          "food": "10",
+          "build_time": "1500"
+        },
+        "14": {
+          "wood": "10300",
+          "clay": "12100",
+          "iron": "13800",
+          "food": "13",
+          "build_time": "1800"
+        },
+        "15": {
+          "wood": "12400",
+          "clay": "14500",
+          "iron": "16600",
+          "food": "15",
+          "build_time": "2700"
+        },
+        "16": {
+          "wood": "21000",
+          "clay": "23000",
+          "iron": "25000",
+          "food": "18",
+          "build_time": "3600"
+        },
+        "17": {
+          "wood": "22000",
+          "clay": "25000",
+          "iron": "26000",
+          "food": "21",
+          "build_time": "7200"
+        },
+        "18": {
+          "wood": "23000",
+          "clay": "28000",
+          "iron": "27000",
+          "food": "26",
+          "build_time": "10800"
+        },
+        "19": {
+          "wood": "24000",
+          "clay": "31000",
+          "iron": "28000",
+          "food": "31",
+          "build_time": "14400"
+        },
+        "20": {
+          "wood": "25000",
+          "clay": "34000",
+          "iron": "29000",
+          "food": "38",
+          "build_time": "18000"
+        },
+        "21": {
+          "wood": "26000",
+          "clay": "37000",
+          "iron": "30000",
+          "food": "44",
+          "build_time": "21600"
+        },
+        "22": {
+          "wood": "27000",
+          "clay": "41000",
+          "iron": "32000",
+          "food": "54",
+          "build_time": "25200"
+        },
+        "23": {
+          "wood": "28000",
+          "clay": "45000",
+          "iron": "34000",
+          "food": "64",
+          "build_time": "28800"
+        },
+        "24": {
+          "wood": "29000",
+          "clay": "50000",
+          "iron": "36000",
+          "food": "78",
+          "build_time": "32400"
+        },
+        "25": {
+          "wood": "30000",
+          "clay": "55000",
+          "iron": "38000",
+          "food": "92",
+          "build_time": "36000"
+        }
+      }
+    },
+    "tavern": {
+      "id": "tavern",
+      "image": "images/tavern.png",
+      "description": "Enables scouting and counter measures. Building level increases the amount of resources you can spend for your spies.",
+      "required_level": 8,
+      "max_level": 15,
+      "min_level": 0,
+      "wood": 150,
+      "wood_factor": 1.3,
+      "clay": 100,
+      "clay_factor": 1.32,
+      "iron": 110,
+      "iron_factor": 1.28,
+      "food": 10,
+      "food_factor": 1.27,
+      "build_time": 1800,
+      "build_time_factor": 1.35,
+      "build_time_offset": -14,
+      "hitpoints": 3,
+      "hitpoints_factor": 1.1,
+      "function": 1000,
+      "function_factor": 2,
+      "points": 15,
+      "points_factor": 1.2,
+      "building_type": "storage",
+      "order": 15,
+      "individual_level_costs": {
+        "1": {
+          "wood": "150",
+          "clay": "100",
+          "iron": "110",
+          "food": "2",
+          "build_time": "300"
+        },
+        "2": {
+          "wood": "200",
+          "clay": "130",
+          "iron": "140",
+          "food": "3",
+          "build_time": "600"
+        },
+        "3": {
+          "wood": "250",
+          "clay": "170",
+          "iron": "180",
+          "food": "3",
+          "build_time": "1200"
+        },
+        "4": {
+          "wood": "330",
+          "clay": "230",
+          "iron": "230",
+          "food": "4",
+          "build_time": "2400"
+        },
+        "5": {
+          "wood": "430",
+          "clay": "300",
+          "iron": "300",
+          "food": "6",
+          "build_time": "3600"
+        },
+        "6": {
+          "wood": "560",
+          "clay": "400",
+          "iron": "380",
+          "food": "7",
+          "build_time": "6000"
+        },
+        "7": {
+          "wood": "720",
+          "clay": "530",
+          "iron": "480",
+          "food": "9",
+          "build_time": "8400"
+        },
+        "8": {
+          "wood": "940",
+          "clay": "700",
+          "iron": "620",
+          "food": "11",
+          "build_time": "12600"
+        },
+        "9": {
+          "wood": "1200",
+          "clay": "900",
+          "iron": "790",
+          "food": "15",
+          "build_time": "18000"
+        },
+        "10": {
+          "wood": "1600",
+          "clay": "1200",
+          "iron": "1000",
+          "food": "18",
+          "build_time": "25200"
+        },
+        "11": {
+          "wood": "2100",
+          "clay": "1600",
+          "iron": "1300",
+          "food": "23",
+          "build_time": "32400"
+        },
+        "12": {
+          "wood": "2700",
+          "clay": "2100",
+          "iron": "1700",
+          "food": "30",
+          "build_time": "39600"
+        },
+        "13": {
+          "wood": "3500",
+          "clay": "2800",
+          "iron": "2100",
+          "food": "37",
+          "build_time": "50400"
+        },
+        "14": {
+          "wood": "4500",
+          "clay": "3700",
+          "iron": "2700",
+          "food": "48",
+          "build_time": "64800"
+        },
+        "15": {
+          "wood": "5900",
+          "clay": "4900",
+          "iron": "3500",
+          "food": "60",
+          "build_time": "86400"
+        }
+      }
+    },
+    "hospital": {
+      "id": "hospital",
+      "image": "images/hospital.png",
+      "description": "Resurrects fallen units. Building level increases the number of units that can be treated in hospital.",
+      "required_level": 4,
+      "max_level": 10,
+      "min_level": 0,
+      "wood": 50,
+      "wood_factor": 1.25,
+      "clay": 80,
+      "clay_factor": 1.22,
+      "iron": 30,
+      "iron_factor": 1.25,
+      "food": 2,
+      "food_factor": 1.27,
+      "build_time": 1200,
+      "build_time_factor": 1.35,
+      "build_time_offset": -14,
+      "hitpoints": 3,
+      "hitpoints_factor": 1.1,
+      "function": 100,
+      "function_factor": 1.2915,
+      "points": 15,
+      "points_factor": 1.2,
+      "building_type": "units",
+      "order": 12,
+      "individual_level_costs": {
+        "1": {
+          "wood": "50",
+          "clay": "80",
+          "iron": "30",
+          "food": "2",
+          "build_time": "180"
+        },
+        "2": {
+          "wood": "100",
+          "clay": "160",
+          "iron": "60",
+          "food": "3",
+          "build_time": "300"
+        },
+        "3": {
+          "wood": "200",
+          "clay": "320",
+          "iron": "120",
+          "food": "3",
+          "build_time": "600"
+        },
+        "4": {
+          "wood": "400",
+          "clay": "640",
+          "iron": "240",
+          "food": "4",
+          "build_time": "900"
+        },
+        "5": {
+          "wood": "1000",
+          "clay": "1600",
+          "iron": "600",
+          "food": "5",
+          "build_time": "1800"
+        },
+        "6": {
+          "wood": "2000",
+          "clay": "3200",
+          "iron": "1200",
+          "food": "7",
+          "build_time": "3600"
+        },
+        "7": {
+          "wood": "4000",
+          "clay": "6400",
+          "iron": "2400",
+          "food": "8",
+          "build_time": "7200"
+        },
+        "8": {
+          "wood": "8000",
+          "clay": "12000",
+          "iron": "4800",
+          "food": "11",
+          "build_time": "14400"
+        },
+        "9": {
+          "wood": "16000",
+          "clay": "24000",
+          "iron": "9600",
+          "food": "14",
+          "build_time": "43200"
+        },
+        "10": {
+          "wood": "32000",
+          "clay": "48000",
+          "iron": "19200",
+          "food": "17",
+          "build_time": "86400"
+        }
+      }
+    },
+    "preceptory": {
+      "id": "preceptory",
+      "image": "images/preceptory.png",
+      "description": "Introduces special Orders. Building level influences different stats for each Order. Thieves Guild: Costs of noblemen. Knight Templars: Costs of defensive infantry units. Teutonic Knights: Costs of offensive cavalry units.",
+      "required_level": 25,
+      "max_level": 10,
+      "min_level": 0,
+      "wood": 35000,
+      "wood_factor": 1.2,
+      "clay": 50000,
+      "clay_factor": 1.17,
+      "iron": 30000,
+      "iron_factor": 1.23,
+      "food": 50,
+      "food_factor": 1.27,
+      "build_time": 14400,
+      "build_time_factor": 1.35,
+      "build_time_offset": -5,
+      "hitpoints": 20,
+      "hitpoints_factor": 1.1,
+      "function": 100,
+      "function_factor": 1.05,
+      "points": 75,
+      "points_factor": 1.2,
+      "building_type": "speedup",
+      "order": 17,
+      "individual_level_costs": {
+        "1": {
+          "wood": "35000",
+          "clay": "50000",
+          "iron": "30000",
+          "food": "11",
+          "build_time": "3600"
+        },
+        "2": {
+          "wood": "42000",
+          "clay": "58500",
+          "iron": "36900",
+          "food": "14",
+          "build_time": "7200"
+        },
+        "3": {
+          "wood": "50400",
+          "clay": "68445",
+          "iron": "45387",
+          "food": "17",
+          "build_time": "10800"
+        },
+        "4": {
+          "wood": "60480",
+          "clay": "80081",
+          "iron": "55826",
+          "food": "21",
+          "build_time": "18000"
+        },
+        "5": {
+          "wood": "72576",
+          "clay": "93694",
+          "iron": "68666",
+          "food": "28",
+          "build_time": "28800"
+        },
+        "6": {
+          "wood": "87091",
+          "clay": "109622",
+          "iron": "84459",
+          "food": "35",
+          "build_time": "43200"
+        },
+        "7": {
+          "wood": "104509",
+          "clay": "128258",
+          "iron": "103885",
+          "food": "45",
+          "build_time": "57600"
+        },
+        "8": {
+          "wood": "125411",
+          "clay": "150062",
+          "iron": "127778",
+          "food": "56",
+          "build_time": "75600"
+        },
+        "9": {
+          "wood": "150494",
+          "clay": "175573",
+          "iron": "157167",
+          "food": "72",
+          "build_time": "100800"
+        },
+        "10": {
+          "wood": "180592",
+          "clay": "205420",
+          "iron": "193316",
+          "food": "92",
+          "build_time": "129600"
+        }
+      }
+    },
+    "chapel": {
+      "id": "chapel",
+      "image": "images/chapel.png",
+      "description": "A chapel is a chapel is a chapel.",
+      "required_level": 1,
+      "max_level": 1,
+      "min_level": 0,
+      "wood": 160,
+      "wood_factor": 1.26,
+      "clay": 200,
+      "clay_factor": 1.28,
+      "iron": 50,
+      "iron_factor": 1.26,
+      "food": 0,
+      "food_factor": 1,
+      "build_time": 60,
+      "build_time_factor": 1.35,
+      "build_time_offset": -14,
+      "hitpoints": 100,
+      "hitpoints_factor": 1,
+      "function": 100,
+      "function_factor": 1.05,
+      "points": 10,
+      "points_factor": 1.2,
+      "building_type": "morale",
+      "order": 8,
+      "individual_level_costs": {
+        "1": {
+          "wood": "160",
+          "clay": "200",
+          "iron": "50",
+          "food": "0",
+          "build_time": "30"
+        }
+      }
+    },
+    "church": {
+      "id": "church",
+      "image": "images/church.png",
+      "description": "Removes battle malus for the province. Building level increases base morale.",
+      "required_level": 1,
+      "max_level": 3,
+      "min_level": 0,
+      "wood": 16000,
+      "wood_factor": 1.26,
+      "clay": 20000,
+      "clay_factor": 1.28,
+      "iron": 5000,
+      "iron_factor": 1.26,
+      "food": 5000,
+      "food_factor": 1.55,
+      "build_time": 28800,
+      "build_time_factor": 1.35,
+      "build_time_offset": 0,
+      "hitpoints": 800,
+      "hitpoints_factor": 1.01,
+      "function": 100,
+      "function_factor": 1.05,
+      "points": 10,
+      "points_factor": 1.2,
+      "building_type": "morale",
+      "order": 7,
+      "individual_level_costs": {
+        "1": {
+          "wood": "16000",
+          "clay": "20000",
+          "iron": "5000",
+          "food": "5000",
+          "build_time": "21600"
+        },
+        "2": {
+          "wood": "20000",
+          "clay": "25000",
+          "iron": "7000",
+          "food": "2750",
+          "build_time": "54000"
+        },
+        "3": {
+          "wood": "25000",
+          "clay": "32000",
+          "iron": "8000",
+          "food": "4263",
+          "build_time": "86400"
+        }
+      }
+    },
+    "academy": {
+      "id": "academy",
+      "image": "images/academy.png",
+      "description": "Produces noblemen and gold coins.",
+      "required_level": 20,
+      "max_level": 1,
+      "min_level": 0,
+      "wood": 60000,
+      "wood_factor": 2,
+      "clay": 75000,
+      "clay_factor": 2,
+      "iron": 60000,
+      "iron_factor": 2,
+      "food": 80,
+      "food_factor": 1.17,
+      "build_time": 57600,
+      "build_time_factor": 1.35,
+      "build_time_offset": 0,
+      "hitpoints": 500,
+      "hitpoints_factor": 1,
+      "function": 100,
+      "function_factor": 1.05,
+      "points": 512,
+      "points_factor": 1.2,
+      "building_type": "speedup",
+      "order": 16,
+      "individual_level_costs": {
+        "1": {
+          "wood": "60000",
+          "clay": "75000",
+          "iron": "60000",
+          "food": "80",
+          "build_time": "36000"
+        }
+      }
+    },
+    "rally_point": {
+      "id": "rally_point",
+      "image": "images/rally_point.png",
+      "description": "Army Management and access to different military tools. Building level increases the time to cancel actions.",
+      "required_level": 1,
+      "max_level": 5,
+      "min_level": 0,
+      "wood": 10,
+      "wood_factor": 5,
+      "clay": 30,
+      "clay_factor": 4,
+      "iron": 35,
+      "iron_factor": 4.5,
+      "food": 1,
+      "food_factor": 2.3,
+      "build_time": 1200,
+      "build_time_factor": 2.8,
+      "build_time_offset": -9,
+      "hitpoints": 3,
+      "hitpoints_factor": 1.1,
+      "function": 5,
+      "function_factor": 1.2,
+      "points": 2,
+      "points_factor": 1.2,
+      "building_type": "bonustime",
+      "order": 9,
+      "individual_level_costs": {
+        "1": {
+          "wood": "50",
+          "clay": "100",
+          "iron": "50",
+          "food": "1",
+          "build_time": "30"
+        },
+        "2": {
+          "wood": "100",
+          "clay": "150",
+          "iron": "150",
+          "food": "1",
+          "build_time": "300"
+        },
+        "3": {
+          "wood": "2500",
+          "clay": "2500",
+          "iron": "3000",
+          "food": "3",
+          "build_time": "28800"
+        },
+        "4": {
+          "wood": "6000",
+          "clay": "9000",
+          "iron": "11000",
+          "food": "7",
+          "build_time": "57600"
+        },
+        "5": {
+          "wood": "13000",
+          "clay": "18000",
+          "iron": "25000",
+          "food": "16",
+          "build_time": "86400"
+        }
+      }
+    },
+    "statue": {
+      "id": "statue",
+      "image": "images/statue.png",
+      "description": "Enables Paladin.",
+      "required_level": 3,
+      "max_level": 5,
+      "min_level": 0,
+      "wood": 160,
+      "wood_factor": 2.77255,
+      "clay": 220,
+      "clay_factor": 2.77255,
+      "iron": 200,
+      "iron_factor": 2.77255,
+      "food": 0,
+      "food_factor": 1,
+      "build_time": 600,
+      "build_time_factor": 2.7,
+      "build_time_offset": -3,
+      "hitpoints": 3,
+      "hitpoints_factor": 1.1,
+      "function": 100,
+      "function_factor": 1,
+      "points": 6,
+      "points_factor": 1.2,
+      "building_type": "speedup",
+      "order": 11,
+      "individual_level_costs": {
+        "1": {
+          "wood": "100",
+          "clay": "100",
+          "iron": "200",
+          "food": "0",
+          "build_time": "120"
+        },
+        "2": {
+          "wood": "500",
+          "clay": "500",
+          "iron": "1000",
+          "food": "0",
+          "build_time": "600"
+        },
+        "3": {
+          "wood": "2000",
+          "clay": "2000",
+          "iron": "4000",
+          "food": "0",
+          "build_time": "3600"
+        },
+        "4": {
+          "wood": "5000",
+          "clay": "5000",
+          "iron": "10000",
+          "food": "0",
+          "build_time": "14400"
+        },
+        "5": {
+          "wood": "10000",
+          "clay": "10000",
+          "iron": "20000",
+          "food": "0",
+          "build_time": "28800"
+        }
+      }
+    },
+    "market": {
+      "id": "market",
+      "image": "images/market.png",
+      "description": "Enables market screen. Building level increases number of available traders.",
+      "required_level": 6,
+      "max_level": 25,
+      "min_level": 0,
+      "wood": 100,
+      "wood_factor": 1.26,
+      "clay": 100,
+      "clay_factor": 1.275,
+      "iron": 100,
+      "iron_factor": 1.26,
+      "food": 20,
+      "food_factor": 1.17,
+      "build_time": 2700,
+      "build_time_factor": 1.2,
+      "build_time_offset": -14,
+      "hitpoints": 3,
+      "hitpoints_factor": 1.1,
+      "function": 1,
+      "function_factor": 1,
+      "points": 10,
+      "points_factor": 1.2,
+      "building_type": "merchant",
+      "order": 14,
+      "individual_level_costs": {
+        "1": {
+          "wood": "100",
+          "clay": "100",
+          "iron": "100",
+          "food": "20",
+          "build_time": "300"
+        },
+        "2": {
+          "wood": "130",
+          "clay": "130",
+          "iron": "130",
+          "food": "3",
+          "build_time": "900"
+        },
+        "3": {
+          "wood": "160",
+          "clay": "160",
+          "iron": "160",
+          "food": "4",
+          "build_time": "1500"
+        },
+        "4": {
+          "wood": "200",
+          "clay": "210",
+          "iron": "200",
+          "food": "5",
+          "build_time": "2100"
+        },
+        "5": {
+          "wood": "250",
+          "clay": "260",
+          "iron": "250",
+          "food": "5",
+          "build_time": "3000"
+        },
+        "6": {
+          "wood": "320",
+          "clay": "340",
+          "iron": "320",
+          "food": "7",
+          "build_time": "4200"
+        },
+        "7": {
+          "wood": "400",
+          "clay": "430",
+          "iron": "400",
+          "food": "7",
+          "build_time": "5400"
+        },
+        "8": {
+          "wood": "500",
+          "clay": "550",
+          "iron": "500",
+          "food": "9",
+          "build_time": "6600"
+        },
+        "9": {
+          "wood": "640",
+          "clay": "700",
+          "iron": "640",
+          "food": "10",
+          "build_time": "7800"
+        },
+        "10": {
+          "wood": "800",
+          "clay": "890",
+          "iron": "800",
+          "food": "12",
+          "build_time": "9000"
+        },
+        "11": {
+          "wood": "1000",
+          "clay": "1100",
+          "iron": "1000",
+          "food": "14",
+          "build_time": "10800"
+        },
+        "12": {
+          "wood": "1300",
+          "clay": "1400",
+          "iron": "1300",
+          "food": "16",
+          "build_time": "12600"
+        },
+        "13": {
+          "wood": "1600",
+          "clay": "1800",
+          "iron": "1600",
+          "food": "20",
+          "build_time": "14400"
+        },
+        "14": {
+          "wood": "2000",
+          "clay": "2400",
+          "iron": "2000",
+          "food": "22",
+          "build_time": "16200"
+        },
+        "15": {
+          "wood": "2500",
+          "clay": "3000",
+          "iron": "2500",
+          "food": "26",
+          "build_time": "18000"
+        },
+        "16": {
+          "wood": "3200",
+          "clay": "3800",
+          "iron": "3200",
+          "food": "31",
+          "build_time": "21000"
+        },
+        "17": {
+          "wood": "4000",
+          "clay": "4900",
+          "iron": "4000",
+          "food": "36",
+          "build_time": "24000"
+        },
+        "18": {
+          "wood": "5100",
+          "clay": "6200",
+          "iron": "5100",
+          "food": "42",
+          "build_time": "28800"
+        },
+        "19": {
+          "wood": "6400",
+          "clay": "7900",
+          "iron": "6400",
+          "food": "49",
+          "build_time": "34200"
+        },
+        "20": {
+          "wood": "8100",
+          "clay": "10100",
+          "iron": "8100",
+          "food": "57",
+          "build_time": "39600"
+        },
+        "21": {
+          "wood": "10200",
+          "clay": "12900",
+          "iron": "10200",
+          "food": "67",
+          "build_time": "45000"
+        },
+        "22": {
+          "wood": "12800",
+          "clay": "16400",
+          "iron": "12800",
+          "food": "79",
+          "build_time": "54000"
+        },
+        "23": {
+          "wood": "16100",
+          "clay": "21000",
+          "iron": "16100",
+          "food": "92",
+          "build_time": "66600"
+        },
+        "24": {
+          "wood": "20300",
+          "clay": "26700",
+          "iron": "20300",
+          "food": "107",
+          "build_time": "81000"
+        },
+        "25": {
+          "wood": "25600",
+          "clay": "34100",
+          "iron": "25600",
+          "food": "126",
+          "build_time": "100800"
+        }
+      }
+    },
+    "timber_camp": {
+      "id": "timber_camp",
+      "image": "images/timber_camp.png",
+      "description": "Produces Wood. Building level increases production rate.",
+      "required_level": 1,
+      "max_level": 30,
+      "min_level": 0,
+      "wood": 50,
+      "wood_factor": 1.25,
+      "clay": 60,
+      "clay_factor": 1.275,
+      "iron": 55,
+      "iron_factor": 1.235,
+      "food": 5,
+      "food_factor": 1.155,
+      "build_time": 900,
+      "build_time_factor": 1.21,
+      "build_time_offset": -65,
+      "hitpoints": 3,
+      "hitpoints_factor": 1.1,
+      "function": 100,
+      "function_factor": 1.12444,
+      "points": 6,
+      "points_factor": 1.2,
+      "building_type": "production",
+      "order": 2,
+      "individual_level_costs": {
+        "1": {
+          "wood": "40",
+          "clay": "50",
+          "iron": "30",
+          "food": "1",
+          "build_time": "30"
+        },
+        "2": {
+          "wood": "50",
+          "clay": "60",
+          "iron": "40",
+          "food": "1",
+          "build_time": "60"
+        },
+        "3": {
+          "wood": "60",
+          "clay": "80",
+          "iron": "50",
+          "food": "1",
+          "build_time": "90"
+        },
+        "4": {
+          "wood": "80",
+          "clay": "100",
+          "iron": "60",
+          "food": "1",
+          "build_time": "120"
+        },
+        "5": {
+          "wood": "100",
+          "clay": "120",
+          "iron": "70",
+          "food": "1",
+          "build_time": "150"
+        },
+        "6": {
+          "wood": "100",
+          "clay": "200",
+          "iron": "100",
+          "food": "1",
+          "build_time": "210"
+        },
+        "7": {
+          "wood": "200",
+          "clay": "200",
+          "iron": "100",
+          "food": "2",
+          "build_time": "300"
+        },
+        "8": {
+          "wood": "200",
+          "clay": "200",
+          "iron": "100",
+          "food": "2",
+          "build_time": "600"
+        },
+        "9": {
+          "wood": "200",
+          "clay": "300",
+          "iron": "200",
+          "food": "2",
+          "build_time": "1200"
+        },
+        "10": {
+          "wood": "300",
+          "clay": "400",
+          "iron": "200",
+          "food": "2",
+          "build_time": "1800"
+        },
+        "11": {
+          "wood": "400",
+          "clay": "500",
+          "iron": "300",
+          "food": "3",
+          "build_time": "2400"
+        },
+        "12": {
+          "wood": "500",
+          "clay": "600",
+          "iron": "300",
+          "food": "3",
+          "build_time": "3000"
+        },
+        "13": {
+          "wood": "600",
+          "clay": "700",
+          "iron": "400",
+          "food": "4",
+          "build_time": "3600"
+        },
+        "14": {
+          "wood": "700",
+          "clay": "900",
+          "iron": "500",
+          "food": "5",
+          "build_time": "4500"
+        },
+        "15": {
+          "wood": "900",
+          "clay": "1000",
+          "iron": "700",
+          "food": "5",
+          "build_time": "5400"
+        },
+        "16": {
+          "wood": "1000",
+          "clay": "1000",
+          "iron": "800",
+          "food": "5",
+          "build_time": "6300"
+        },
+        "17": {
+          "wood": "1000",
+          "clay": "2000",
+          "iron": "1000",
+          "food": "7",
+          "build_time": "7200"
+        },
+        "18": {
+          "wood": "2000",
+          "clay": "2000",
+          "iron": "1000",
+          "food": "8",
+          "build_time": "9000"
+        },
+        "19": {
+          "wood": "2000",
+          "clay": "3000",
+          "iron": "2000",
+          "food": "9",
+          "build_time": "10800"
+        },
+        "20": {
+          "wood": "3000",
+          "clay": "3000",
+          "iron": "2000",
+          "food": "10",
+          "build_time": "14400"
+        },
+        "21": {
+          "wood": "3000",
+          "clay": "4000",
+          "iron": "2000",
+          "food": "12",
+          "build_time": "18000"
+        },
+        "22": {
+          "wood": "4000",
+          "clay": "5000",
+          "iron": "3000",
+          "food": "14",
+          "build_time": "21600"
+        },
+        "23": {
+          "wood": "5000",
+          "clay": "6000",
+          "iron": "4000",
+          "food": "16",
+          "build_time": "25200"
+        },
+        "24": {
+          "wood": "6000",
+          "clay": "8000",
+          "iron": "5000",
+          "food": "19",
+          "build_time": "28800"
+        },
+        "25": {
+          "wood": "8000",
+          "clay": "10000",
+          "iron": "6000",
+          "food": "21",
+          "build_time": "32400"
+        },
+        "26": {
+          "wood": "10000",
+          "clay": "12000",
+          "iron": "7000",
+          "food": "24",
+          "build_time": "36000"
+        },
+        "27": {
+          "wood": "12000",
+          "clay": "16000",
+          "iron": "9000",
+          "food": "29",
+          "build_time": "43200"
+        },
+        "28": {
+          "wood": "16000",
+          "clay": "19000",
+          "iron": "12000",
+          "food": "33",
+          "build_time": "50400"
+        },
+        "29": {
+          "wood": "19000",
+          "clay": "24000",
+          "iron": "15000",
+          "food": "38",
+          "build_time": "57600"
+        },
+        "30": {
+          "wood": "24000",
+          "clay": "30000",
+          "iron": "18000",
+          "food": "43",
+          "build_time": "64800"
+        }
+      }
+    },
+    "clay_pit": {
+      "id": "clay_pit",
+      "image": "images/clay_pit.png",
+      "description": "Produces Clay. Building level increases production rate.",
+      "required_level": 1,
+      "max_level": 30,
+      "min_level": 0,
+      "wood": 65,
+      "wood_factor": 1.27,
+      "clay": 40,
+      "clay_factor": 1.265,
+      "iron": 50,
+      "iron_factor": 1.26,
+      "food": 10,
+      "food_factor": 1.14,
+      "build_time": 900,
+      "build_time_factor": 1.21,
+      "build_time_offset": -65,
+      "hitpoints": 3,
+      "hitpoints_factor": 1.1,
+      "function": 100,
+      "function_factor": 1.12444,
+      "points": 6,
+      "points_factor": 1.2,
+      "building_type": "production",
+      "order": 3,
+      "individual_level_costs": {
+        "1": {
+          "wood": "50",
+          "clay": "40",
+          "iron": "30",
+          "food": "1",
+          "build_time": "30"
+        },
+        "2": {
+          "wood": "60",
+          "clay": "50",
+          "iron": "40",
+          "food": "1",
+          "build_time": "60"
+        },
+        "3": {
+          "wood": "80",
+          "clay": "60",
+          "iron": "50",
+          "food": "2",
+          "build_time": "90"
+        },
+        "4": {
+          "wood": "100",
+          "clay": "80",
+          "iron": "60",
+          "food": "2",
+          "build_time": "120"
+        },
+        "5": {
+          "wood": "100",
+          "clay": "100",
+          "iron": "70",
+          "food": "2",
+          "build_time": "150"
+        },
+        "6": {
+          "wood": "200",
+          "clay": "100",
+          "iron": "90",
+          "food": "2",
+          "build_time": "210"
+        },
+        "7": {
+          "wood": "200",
+          "clay": "200",
+          "iron": "100",
+          "food": "3",
+          "build_time": "300"
+        },
+        "8": {
+          "wood": "200",
+          "clay": "200",
+          "iron": "100",
+          "food": "3",
+          "build_time": "600"
+        },
+        "9": {
+          "wood": "300",
+          "clay": "200",
+          "iron": "200",
+          "food": "4",
+          "build_time": "1200"
+        },
+        "10": {
+          "wood": "400",
+          "clay": "300",
+          "iron": "200",
+          "food": "4",
+          "build_time": "1800"
+        },
+        "11": {
+          "wood": "500",
+          "clay": "400",
+          "iron": "300",
+          "food": "4",
+          "build_time": "2400"
+        },
+        "12": {
+          "wood": "600",
+          "clay": "500",
+          "iron": "300",
+          "food": "5",
+          "build_time": "3000"
+        },
+        "13": {
+          "wood": "700",
+          "clay": "600",
+          "iron": "400",
+          "food": "6",
+          "build_time": "3600"
+        },
+        "14": {
+          "wood": "900",
+          "clay": "700",
+          "iron": "500",
+          "food": "7",
+          "build_time": "4500"
+        },
+        "15": {
+          "wood": "1000",
+          "clay": "900",
+          "iron": "700",
+          "food": "8",
+          "build_time": "5400"
+        },
+        "16": {
+          "wood": "1000",
+          "clay": "1000",
+          "iron": "800",
+          "food": "8",
+          "build_time": "6300"
+        },
+        "17": {
+          "wood": "2000",
+          "clay": "1000",
+          "iron": "1000",
+          "food": "10",
+          "build_time": "7200"
+        },
+        "18": {
+          "wood": "2000",
+          "clay": "2000",
+          "iron": "1000",
+          "food": "12",
+          "build_time": "9000"
+        },
+        "19": {
+          "wood": "3000",
+          "clay": "2000",
+          "iron": "2000",
+          "food": "13",
+          "build_time": "10800"
+        },
+        "20": {
+          "wood": "3000",
+          "clay": "3000",
+          "iron": "2000",
+          "food": "15",
+          "build_time": "14400"
+        },
+        "21": {
+          "wood": "4000",
+          "clay": "3000",
+          "iron": "2000",
+          "food": "16",
+          "build_time": "18000"
+        },
+        "22": {
+          "wood": "5000",
+          "clay": "4000",
+          "iron": "3000",
+          "food": "20",
+          "build_time": "21600"
+        },
+        "23": {
+          "wood": "6000",
+          "clay": "5000",
+          "iron": "4000",
+          "food": "22",
+          "build_time": "25200"
+        },
+        "24": {
+          "wood": "8000",
+          "clay": "6000",
+          "iron": "5000",
+          "food": "25",
+          "build_time": "28800"
+        },
+        "25": {
+          "wood": "10000",
+          "clay": "8000",
+          "iron": "6000",
+          "food": "28",
+          "build_time": "32400"
+        },
+        "26": {
+          "wood": "12000",
+          "clay": "10000",
+          "iron": "7000",
+          "food": "33",
+          "build_time": "36000"
+        },
+        "27": {
+          "wood": "16000",
+          "clay": "12000",
+          "iron": "9000",
+          "food": "37",
+          "build_time": "43200"
+        },
+        "28": {
+          "wood": "19000",
+          "clay": "16000",
+          "iron": "12000",
+          "food": "42",
+          "build_time": "50400"
+        },
+        "29": {
+          "wood": "24000",
+          "clay": "19000",
+          "iron": "15000",
+          "food": "48",
+          "build_time": "57600"
+        },
+        "30": {
+          "wood": "30000",
+          "clay": "24000",
+          "iron": "18000",
+          "food": "55",
+          "build_time": "64800"
+        }
+      }
+    },
+    "iron_mine": {
+      "id": "iron_mine",
+      "image": "images/iron_mine.png",
+      "description": "Produces Iron. Building level increases production rate.",
+      "required_level": 1,
+      "max_level": 30,
+      "min_level": 0,
+      "wood": 75,
+      "wood_factor": 1.252,
+      "clay": 65,
+      "clay_factor": 1.275,
+      "iron": 70,
+      "iron_factor": 1.24,
+      "food": 10,
+      "food_factor": 1.17,
+      "build_time": 1080,
+      "build_time_factor": 1.21,
+      "build_time_offset": -65,
+      "hitpoints": 3,
+      "hitpoints_factor": 1.1,
+      "function": 100,
+      "function_factor": 1.12444,
+      "points": 6,
+      "points_factor": 1.2,
+      "building_type": "production",
+      "order": 4,
+      "individual_level_costs": {
+        "1": {
+          "wood": "60",
+          "clay": "50",
+          "iron": "60",
+          "food": "1",
+          "build_time": "30"
+        },
+        "2": {
+          "wood": "70",
+          "clay": "60",
+          "iron": "70",
+          "food": "2",
+          "build_time": "60"
+        },
+        "3": {
+          "wood": "90",
+          "clay": "80",
+          "iron": "90",
+          "food": "2",
+          "build_time": "90"
+        },
+        "4": {
+          "wood": "100",
+          "clay": "100",
+          "iron": "100",
+          "food": "2",
+          "build_time": "120"
+        },
+        "5": {
+          "wood": "100",
+          "clay": "100",
+          "iron": "100",
+          "food": "3",
+          "build_time": "150"
+        },
+        "6": {
+          "wood": "200",
+          "clay": "200",
+          "iron": "200",
+          "food": "3",
+          "build_time": "210"
+        },
+        "7": {
+          "wood": "200",
+          "clay": "200",
+          "iron": "200",
+          "food": "4",
+          "build_time": "300"
+        },
+        "8": {
+          "wood": "300",
+          "clay": "200",
+          "iron": "300",
+          "food": "4",
+          "build_time": "600"
+        },
+        "9": {
+          "wood": "400",
+          "clay": "300",
+          "iron": "400",
+          "food": "5",
+          "build_time": "1200"
+        },
+        "10": {
+          "wood": "400",
+          "clay": "400",
+          "iron": "400",
+          "food": "6",
+          "build_time": "1800"
+        },
+        "11": {
+          "wood": "500",
+          "clay": "500",
+          "iron": "500",
+          "food": "7",
+          "build_time": "2400"
+        },
+        "12": {
+          "wood": "700",
+          "clay": "600",
+          "iron": "700",
+          "food": "8",
+          "build_time": "3000"
+        },
+        "13": {
+          "wood": "800",
+          "clay": "700",
+          "iron": "800",
+          "food": "10",
+          "build_time": "3600"
+        },
+        "14": {
+          "wood": "1000",
+          "clay": "900",
+          "iron": "1000",
+          "food": "11",
+          "build_time": "4500"
+        },
+        "15": {
+          "wood": "1000",
+          "clay": "1000",
+          "iron": "1000",
+          "food": "13",
+          "build_time": "5400"
+        },
+        "16": {
+          "wood": "2000",
+          "clay": "1000",
+          "iron": "2000",
+          "food": "15",
+          "build_time": "6300"
+        },
+        "17": {
+          "wood": "2000",
+          "clay": "2000",
+          "iron": "2000",
+          "food": "18",
+          "build_time": "7200"
+        },
+        "18": {
+          "wood": "3000",
+          "clay": "2000",
+          "iron": "3000",
+          "food": "21",
+          "build_time": "9000"
+        },
+        "19": {
+          "wood": "3000",
+          "clay": "3000",
+          "iron": "3000",
+          "food": "25",
+          "build_time": "10800"
+        },
+        "20": {
+          "wood": "4000",
+          "clay": "3000",
+          "iron": "4000",
+          "food": "28",
+          "build_time": "14400"
+        },
+        "21": {
+          "wood": "5000",
+          "clay": "4000",
+          "iron": "5000",
+          "food": "34",
+          "build_time": "18000"
+        },
+        "22": {
+          "wood": "6000",
+          "clay": "5000",
+          "iron": "6000",
+          "food": "39",
+          "build_time": "21600"
+        },
+        "23": {
+          "wood": "8000",
+          "clay": "6000",
+          "iron": "8000",
+          "food": "46",
+          "build_time": "25200"
+        },
+        "24": {
+          "wood": "10000",
+          "clay": "8000",
+          "iron": "10000",
+          "food": "54",
+          "build_time": "28800"
+        },
+        "25": {
+          "wood": "12000",
+          "clay": "10000",
+          "iron": "12000",
+          "food": "63",
+          "build_time": "32400"
+        },
+        "26": {
+          "wood": "15000",
+          "clay": "12000",
+          "iron": "15000",
+          "food": "74",
+          "build_time": "36000"
+        },
+        "27": {
+          "wood": "19000",
+          "clay": "16000",
+          "iron": "19000",
+          "food": "86",
+          "build_time": "43200"
+        },
+        "28": {
+          "wood": "23000",
+          "clay": "19000",
+          "iron": "23000",
+          "food": "100",
+          "build_time": "50400"
+        },
+        "29": {
+          "wood": "29000",
+          "clay": "24000",
+          "iron": "29000",
+          "food": "118",
+          "build_time": "57600"
+        },
+        "30": {
+          "wood": "36000",
+          "clay": "30000",
+          "iron": "36000",
+          "food": "138",
+          "build_time": "64800"
+        }
+      }
+    },
+    "farm": {
+      "id": "farm",
+      "image": "images/farm.png",
+      "description": "Produces Food. Building level increases population limit.",
+      "required_level": 1,
+      "max_level": 30,
+      "min_level": 1,
+      "wood": 35,
+      "wood_factor": 1.312,
+      "clay": 40,
+      "clay_factor": 1.32,
+      "iron": 35,
+      "iron_factor": 1.31,
+      "food": 0,
+      "food_factor": 1,
+      "build_time": 1200,
+      "build_time_factor": 1.205,
+      "build_time_offset": -30,
+      "hitpoints": 5,
+      "hitpoints_factor": 1.1,
+      "function": 240,
+      "function_factor": 1.172102298,
+      "points": 5,
+      "points_factor": 1.2,
+      "building_type": "production",
+      "order": 5,
+      "individual_level_costs": {
+        "1": {
+          "wood": "40",
+          "clay": "50",
+          "iron": "30",
+          "food": "0",
+          "build_time": "60"
+        },
+        "2": {
+          "wood": "50",
+          "clay": "70",
+          "iron": "40",
+          "food": "0",
+          "build_time": "90"
+        },
+        "3": {
+          "wood": "70",
+          "clay": "90",
+          "iron": "50",
+          "food": "0",
+          "build_time": "120"
+        },
+        "4": {
+          "wood": "90",
+          "clay": "110",
+          "iron": "70",
+          "food": "0",
+          "build_time": "300"
+        },
+        "5": {
+          "wood": "120",
+          "clay": "150",
+          "iron": "90",
+          "food": "0",
+          "build_time": "450"
+        },
+        "6": {
+          "wood": "150",
+          "clay": "190",
+          "iron": "120",
+          "food": "0",
+          "build_time": "600"
+        },
+        "7": {
+          "wood": "200",
+          "clay": "250",
+          "iron": "150",
+          "food": "0",
+          "build_time": "1800"
+        },
+        "8": {
+          "wood": "260",
+          "clay": "330",
+          "iron": "200",
+          "food": "0",
+          "build_time": "2400"
+        },
+        "9": {
+          "wood": "350",
+          "clay": "430",
+          "iron": "260",
+          "food": "0",
+          "build_time": "3000"
+        },
+        "10": {
+          "wood": "500",
+          "clay": "600",
+          "iron": "300",
+          "food": "0",
+          "build_time": "3600"
+        },
+        "11": {
+          "wood": "600",
+          "clay": "700",
+          "iron": "400",
+          "food": "0",
+          "build_time": "4500"
+        },
+        "12": {
+          "wood": "800",
+          "clay": "1000",
+          "iron": "600",
+          "food": "0",
+          "build_time": "5400"
+        },
+        "13": {
+          "wood": "1000",
+          "clay": "1300",
+          "iron": "800",
+          "food": "0",
+          "build_time": "6300"
+        },
+        "14": {
+          "wood": "1300",
+          "clay": "1700",
+          "iron": "1000",
+          "food": "0",
+          "build_time": "7200"
+        },
+        "15": {
+          "wood": "1800",
+          "clay": "2200",
+          "iron": "1300",
+          "food": "0",
+          "build_time": "9000"
+        },
+        "16": {
+          "wood": "2300",
+          "clay": "2900",
+          "iron": "1700",
+          "food": "0",
+          "build_time": "10800"
+        },
+        "17": {
+          "wood": "3000",
+          "clay": "3800",
+          "iron": "2300",
+          "food": "0",
+          "build_time": "12600"
+        },
+        "18": {
+          "wood": "3900",
+          "clay": "4900",
+          "iron": "3000",
+          "food": "0",
+          "build_time": "14400"
+        },
+        "19": {
+          "wood": "5200",
+          "clay": "6500",
+          "iron": "3900",
+          "food": "0",
+          "build_time": "18000"
+        },
+        "20": {
+          "wood": "6800",
+          "clay": "8500",
+          "iron": "5100",
+          "food": "0",
+          "build_time": "21600"
+        },
+        "21": {
+          "wood": "8900",
+          "clay": "11100",
+          "iron": "6600",
+          "food": "0",
+          "build_time": "25200"
+        },
+        "22": {
+          "wood": "12000",
+          "clay": "15000",
+          "iron": "9000",
+          "food": "0",
+          "build_time": "28800"
+        },
+        "23": {
+          "wood": "15000",
+          "clay": "19000",
+          "iron": "11000",
+          "food": "0",
+          "build_time": "36000"
+        },
+        "24": {
+          "wood": "20000",
+          "clay": "25000",
+          "iron": "15000",
+          "food": "0",
+          "build_time": "43200"
+        },
+        "25": {
+          "wood": "26000",
+          "clay": "33000",
+          "iron": "20000",
+          "food": "0",
+          "build_time": "50400"
+        },
+        "26": {
+          "wood": "34000",
+          "clay": "43000",
+          "iron": "26000",
+          "food": "0",
+          "build_time": "57600"
+        },
+        "27": {
+          "wood": "45000",
+          "clay": "56000",
+          "iron": "34000",
+          "food": "0",
+          "build_time": "64800"
+        },
+        "28": {
+          "wood": "59000",
+          "clay": "73000",
+          "iron": "44000",
+          "food": "0",
+          "build_time": "79200"
+        },
+        "29": {
+          "wood": "77000",
+          "clay": "96000",
+          "iron": "58000",
+          "food": "0",
+          "build_time": "93600"
+        },
+        "30": {
+          "wood": "101000",
+          "clay": "126000",
+          "iron": "76000",
+          "food": "0",
+          "build_time": "108000"
+        }
+      }
+    },
+    "warehouse": {
+      "id": "warehouse",
+      "image": "images/warehouse.png",
+      "description": "Resource storage. Building level increases storage limit.",
+      "required_level": 1,
+      "max_level": 30,
+      "min_level": 1,
+      "wood": 55,
+      "wood_factor": 1.268,
+      "clay": 50,
+      "clay_factor": 1.27,
+      "iron": 40,
+      "iron_factor": 1.275,
+      "food": 0,
+      "food_factor": 1,
+      "build_time": 1200,
+      "build_time_factor": 1.22,
+      "build_time_offset": -33,
+      "hitpoints": 3,
+      "hitpoints_factor": 1.1,
+      "function": 1000,
+      "function_factor": 1.229493414,
+      "points": 6,
+      "points_factor": 1.2,
+      "building_type": "production",
+      "order": 6,
+      "individual_level_costs": {
+        "1": {
+          "wood": "200",
+          "clay": "190",
+          "iron": "170",
+          "food": "0",
+          "build_time": "30"
+        },
+        "2": {
+          "wood": "240",
+          "clay": "230",
+          "iron": "210",
+          "food": "0",
+          "build_time": "60"
+        },
+        "3": {
+          "wood": "290",
+          "clay": "280",
+          "iron": "250",
+          "food": "0",
+          "build_time": "90"
+        },
+        "4": {
+          "wood": "350",
+          "clay": "340",
+          "iron": "300",
+          "food": "0",
+          "build_time": "120"
+        },
+        "5": {
+          "wood": "430",
+          "clay": "410",
+          "iron": "360",
+          "food": "0",
+          "build_time": "150"
+        },
+        "6": {
+          "wood": "520",
+          "clay": "490",
+          "iron": "440",
+          "food": "0",
+          "build_time": "240"
+        },
+        "7": {
+          "wood": "630",
+          "clay": "600",
+          "iron": "530",
+          "food": "0",
+          "build_time": "360"
+        },
+        "8": {
+          "wood": "760",
+          "clay": "720",
+          "iron": "650",
+          "food": "0",
+          "build_time": "600"
+        },
+        "9": {
+          "wood": "920",
+          "clay": "870",
+          "iron": "780",
+          "food": "0",
+          "build_time": "1200"
+        },
+        "10": {
+          "wood": "1100",
+          "clay": "1100",
+          "iron": "900",
+          "food": "0",
+          "build_time": "2400"
+        },
+        "11": {
+          "wood": "1300",
+          "clay": "1300",
+          "iron": "1100",
+          "food": "0",
+          "build_time": "3600"
+        },
+        "12": {
+          "wood": "1600",
+          "clay": "1500",
+          "iron": "1400",
+          "food": "0",
+          "build_time": "5400"
+        },
+        "13": {
+          "wood": "2000",
+          "clay": "1900",
+          "iron": "1700",
+          "food": "0",
+          "build_time": "7200"
+        },
+        "14": {
+          "wood": "2400",
+          "clay": "2300",
+          "iron": "2000",
+          "food": "0",
+          "build_time": "9000"
+        },
+        "15": {
+          "wood": "2900",
+          "clay": "2700",
+          "iron": "2500",
+          "food": "0",
+          "build_time": "10800"
+        },
+        "16": {
+          "wood": "3500",
+          "clay": "3300",
+          "iron": "3000",
+          "food": "0",
+          "build_time": "12600"
+        },
+        "17": {
+          "wood": "4200",
+          "clay": "4000",
+          "iron": "3600",
+          "food": "0",
+          "build_time": "14400"
+        },
+        "18": {
+          "wood": "5100",
+          "clay": "4900",
+          "iron": "4300",
+          "food": "0",
+          "build_time": "18000"
+        },
+        "19": {
+          "wood": "6200",
+          "clay": "5900",
+          "iron": "5300",
+          "food": "0",
+          "build_time": "21600"
+        },
+        "20": {
+          "wood": "7500",
+          "clay": "7100",
+          "iron": "6400",
+          "food": "0",
+          "build_time": "25200"
+        },
+        "21": {
+          "wood": "9100",
+          "clay": "8600",
+          "iron": "7700",
+          "food": "0",
+          "build_time": "28800"
+        },
+        "22": {
+          "wood": "11000",
+          "clay": "10000",
+          "iron": "9000",
+          "food": "0",
+          "build_time": "36000"
+        },
+        "23": {
+          "wood": "13000",
+          "clay": "13000",
+          "iron": "11000",
+          "food": "0",
+          "build_time": "43200"
+        },
+        "24": {
+          "wood": "16000",
+          "clay": "15000",
+          "iron": "14000",
+          "food": "0",
+          "build_time": "50400"
+        },
+        "25": {
+          "wood": "19000",
+          "clay": "18000",
+          "iron": "16000",
+          "food": "0",
+          "build_time": "57600"
+        },
+        "26": {
+          "wood": "23000",
+          "clay": "22000",
+          "iron": "20000",
+          "food": "0",
+          "build_time": "64800"
+        },
+        "27": {
+          "wood": "28000",
+          "clay": "27000",
+          "iron": "24000",
+          "food": "0",
+          "build_time": "72000"
+        },
+        "28": {
+          "wood": "34000",
+          "clay": "33000",
+          "iron": "29000",
+          "food": "0",
+          "build_time": "79200"
+        },
+        "29": {
+          "wood": "42000",
+          "clay": "40000",
+          "iron": "35000",
+          "food": "0",
+          "build_time": "93600"
+        },
+        "30": {
+          "wood": "50000",
+          "clay": "48000",
+          "iron": "43000",
+          "food": "0",
+          "build_time": "108000"
+        }
+      }
+    },
+    "wall": {
+      "id": "wall",
+      "image": "images/wall.png",
+      "description": "Protects village. Building level increases defense bonus.",
+      "required_level": 5,
+      "max_level": 20,
+      "min_level": 0,
+      "wood": 50,
+      "wood_factor": 1.26,
+      "clay": 100,
+      "clay_factor": 1.275,
+      "iron": 20,
+      "iron_factor": 1.26,
+      "food": 5,
+      "food_factor": 1.17,
+      "build_time": 3600,
+      "build_time_factor": 1.225,
+      "build_time_offset": -28,
+      "hitpoints": 3,
+      "hitpoints_factor": 1.1,
+      "function": 20,
+      "function_factor": 1.2515,
+      "points": 8,
+      "points_factor": 1.2,
+      "building_type": "bonusdefense",
+      "order": 13,
+      "individual_level_costs": {
+        "1": {
+          "wood": "50",
+          "clay": "100",
+          "iron": "20",
+          "food": "5",
+          "build_time": "150"
+        },
+        "2": {
+          "wood": "60",
+          "clay": "130",
+          "iron": "30",
+          "food": "1",
+          "build_time": "300"
+        },
+        "3": {
+          "wood": "80",
+          "clay": "160",
+          "iron": "30",
+          "food": "1",
+          "build_time": "900"
+        },
+        "4": {
+          "wood": "100",
+          "clay": "210",
+          "iron": "40",
+          "food": "1",
+          "build_time": "1800"
+        },
+        "5": {
+          "wood": "130",
+          "clay": "260",
+          "iron": "50",
+          "food": "1",
+          "build_time": "3000"
+        },
+        "6": {
+          "wood": "160",
+          "clay": "340",
+          "iron": "60",
+          "food": "2",
+          "build_time": "4800"
+        },
+        "7": {
+          "wood": "200",
+          "clay": "430",
+          "iron": "80",
+          "food": "2",
+          "build_time": "7200"
+        },
+        "8": {
+          "wood": "250",
+          "clay": "550",
+          "iron": "100",
+          "food": "2",
+          "build_time": "10800"
+        },
+        "9": {
+          "wood": "320",
+          "clay": "700",
+          "iron": "130",
+          "food": "3",
+          "build_time": "14400"
+        },
+        "10": {
+          "wood": "400",
+          "clay": "890",
+          "iron": "160",
+          "food": "3",
+          "build_time": "18000"
+        },
+        "11": {
+          "wood": "500",
+          "clay": "1100",
+          "iron": "200",
+          "food": "3",
+          "build_time": "21600"
+        },
+        "12": {
+          "wood": "640",
+          "clay": "1400",
+          "iron": "250",
+          "food": "4",
+          "build_time": "25200"
+        },
+        "13": {
+          "wood": "800",
+          "clay": "1800",
+          "iron": "320",
+          "food": "5",
+          "build_time": "32400"
+        },
+        "14": {
+          "wood": "1000",
+          "clay": "2400",
+          "iron": "400",
+          "food": "5",
+          "build_time": "43200"
+        },
+        "15": {
+          "wood": "1300",
+          "clay": "3000",
+          "iron": "510",
+          "food": "7",
+          "build_time": "50400"
+        },
+        "16": {
+          "wood": "1600",
+          "clay": "3800",
+          "iron": "640",
+          "food": "8",
+          "build_time": "64800"
+        },
+        "17": {
+          "wood": "2000",
+          "clay": "4900",
+          "iron": "810",
+          "food": "9",
+          "build_time": "79200"
+        },
+        "18": {
+          "wood": "2500",
+          "clay": "6200",
+          "iron": "1000",
+          "food": "10",
+          "build_time": "93600"
+        },
+        "19": {
+          "wood": "3200",
+          "clay": "7900",
+          "iron": "1300",
+          "food": "12",
+          "build_time": "111600"
+        },
+        "20": {
+          "wood": "4000",
+          "clay": "10100",
+          "iron": "1600",
+          "food": "15",
+          "build_time": "129600"
+        }
+      }
+    }
+  },
+  "GameData/units": {
+    "spear": {
+      "name": "spear",
+      "building": "barracks",
+      "required_level": 1,
+      "wood": 50,
+      "clay": 30,
+      "iron": 20,
+      "food": 1,
+      "build_time": 90,
+      "attack": 10,
+      "def_inf": 25,
+      "def_kav": 45,
+      "def_arc": 10,
+      "speed": 14,
+      "load": 25,
+      "type": 1,
+      "points_att": 1,
+      "points_def": 4
+    },
+    "sword": {
+      "name": "sword",
+      "building": "barracks",
+      "required_level": 3,
+      "wood": 30,
+      "clay": 30,
+      "iron": 70,
+      "food": 1,
+      "build_time": 120,
+      "attack": 25,
+      "def_inf": 55,
+      "def_kav": 5,
+      "def_arc": 30,
+      "speed": 18,
+      "load": 15,
+      "type": 1,
+      "points_att": 2,
+      "points_def": 5
+    },
+    "axe": {
+      "name": "axe",
+      "building": "barracks",
+      "required_level": 5,
+      "wood": 60,
+      "clay": 30,
+      "iron": 40,
+      "food": 1,
+      "build_time": 150,
+      "attack": 45,
+      "def_inf": 10,
+      "def_kav": 5,
+      "def_arc": 10,
+      "speed": 14,
+      "load": 20,
+      "type": 1,
+      "points_att": 4,
+      "points_def": 1
+    },
+    "archer": {
+      "name": "archer",
+      "building": "barracks",
+      "required_level": 9,
+      "wood": 80,
+      "clay": 30,
+      "iron": 60,
+      "food": 1,
+      "build_time": 180,
+      "attack": 25,
+      "def_inf": 10,
+      "def_kav": 30,
+      "def_arc": 60,
+      "speed": 14,
+      "load": 10,
+      "type": 3,
+      "points_att": 2,
+      "points_def": 5
+    },
+    "light_cavalry": {
+      "name": "light_cavalry",
+      "building": "barracks",
+      "required_level": 11,
+      "wood": 125,
+      "clay": 100,
+      "iron": 250,
+      "food": 4,
+      "build_time": 360,
+      "attack": 130,
+      "def_inf": 30,
+      "def_kav": 40,
+      "def_arc": 30,
+      "speed": 8,
+      "load": 50,
+      "type": 2,
+      "points_att": 13,
+      "points_def": 5
+    },
+    "mounted_archer": {
+      "name": "mounted_archer",
+      "building": "barracks",
+      "required_level": 13,
+      "wood": 250,
+      "clay": 200,
+      "iron": 100,
+      "food": 5,
+      "build_time": 450,
+      "attack": 150,
+      "def_inf": 40,
+      "def_kav": 30,
+      "def_arc": 50,
+      "speed": 8,
+      "load": 50,
+      "type": 3,
+      "points_att": 12,
+      "points_def": 6
+    },
+    "heavy_cavalry": {
+      "name": "heavy_cavalry",
+      "building": "barracks",
+      "required_level": 21,
+      "wood": 200,
+      "clay": 150,
+      "iron": 600,
+      "food": 6,
+      "build_time": 600,
+      "attack": 150,
+      "def_inf": 200,
+      "def_kav": 160,
+      "def_arc": 180,
+      "speed": 9,
+      "load": 50,
+      "type": 2,
+      "points_att": 15,
+      "points_def": 23
+    },
+    "ram": {
+      "name": "ram",
+      "building": "barracks",
+      "required_level": 15,
+      "wood": 300,
+      "clay": 200,
+      "iron": 200,
+      "food": 5,
+      "build_time": 480,
+      "attack": 2,
+      "def_inf": 20,
+      "def_kav": 50,
+      "def_arc": 20,
+      "speed": 24,
+      "load": 0,
+      "type": 1,
+      "points_att": 8,
+      "points_def": 4
+    },
+    "catapult": {
+      "name": "catapult",
+      "building": "barracks",
+      "required_level": 17,
+      "wood": 320,
+      "clay": 400,
+      "iron": 100,
+      "food": 8,
+      "build_time": 450,
+      "attack": 100,
+      "def_inf": 100,
+      "def_kav": 50,
+      "def_arc": 100,
+      "speed": 24,
+      "load": 0,
+      "type": 1,
+      "points_att": 10,
+      "points_def": 12
+    },
+    "knight": {
+      "name": "knight",
+      "building": "statue",
+      "required_level": 1,
+      "wood": 0,
+      "clay": 0,
+      "iron": 0,
+      "food": 1,
+      "build_time": 21600,
+      "attack": 150,
+      "def_inf": 250,
+      "def_kav": 400,
+      "def_arc": 150,
+      "speed": 8,
+      "load": 100,
+      "type": 2,
+      "points_att": 20,
+      "points_def": 40
+    },
+    "snob": {
+      "name": "snob",
+      "building": "academy",
+      "required_level": 1,
+      "wood": 40000,
+      "clay": 50000,
+      "iron": 50000,
+      "food": 100,
+      "build_time": 10800,
+      "attack": 30,
+      "def_inf": 100,
+      "def_kav": 50,
+      "def_arc": 100,
+      "points_att": 200,
+      "points_def": 200,
+      "speed": 35,
+      "load": 0,
+      "type": 1,
+      "special": 1
+    },
+    "trebuchet": {
+      "name": "trebuchet",
+      "building": "preceptory",
+      "required_level": 1,
+      "wood": 4000,
+      "clay": 2000,
+      "iron": 2000,
+      "food": 10,
+      "build_time": 1200,
+      "attack": 30,
+      "def_inf": 200,
+      "def_kav": 250,
+      "def_arc": 200,
+      "speed": 50,
+      "load": 0,
+      "type": 1,
+      "points_att": 0,
+      "points_def": 25
+    },
+    "doppelsoldner": {
+      "name": "doppelsoldner",
+      "building": "preceptory",
+      "required_level": 1,
+      "wood": 1200,
+      "clay": 1200,
+      "iron": 2400,
+      "food": 6,
+      "build_time": 1200,
+      "attack": 300,
+      "def_inf": 100,
+      "def_kav": 100,
+      "def_arc": 50,
+      "speed": 14,
+      "load": 10,
+      "type": 1,
+      "points_att": 25,
+      "points_def": 10
+    }
+  },
+  "GameData/officers": {
+    "leader": {
+      "command_types": ["attack"],
+      "abilities": [{ "type": "boost_attacking_power", "bonus_percentage": 10 }]
+    },
+    "loot_master": {
+      "command_types": ["attack"],
+      "exclude_unit_types": ["ram", "catapult", "snob"],
+      "abilities": [
+        { "type": "boost_carrying_capacity", "bonus_percentage": 50 },
+        {
+          "type": "change_movement_speed",
+          "bonus_percentage": 100,
+          "conditions": { "target_barbarian": true }
+        },
+        { "type": "upgrade_barbarian_production", "chance": 0.1 }
+      ]
+    },
+    "medic": {
+      "command_types": ["attack"],
+      "abilities": [{ "type": "revive_attackers", "percentage": 10 }]
+    },
+    "scout": {
+      "command_types": ["attack"],
+      "abilities": [{ "type": "escape_defeat" }]
+    },
+    "supporter": {
+      "command_types": ["support", "relocate"],
+      "abilities": [
+        {
+          "type": "change_movement_speed",
+          "bonus_percentage": 100,
+          "conditions": []
+        }
+      ]
+    },
+    "bastard": {
+      "command_types": ["attack"],
+      "abilities": [
+        {
+          "type": "change_movement_speed",
+          "speed": "snob",
+          "conditions": { "target_barbarian": false }
+        }
+      ]
+    }
+  },
+  "GameData/premium": {
+    "premium_boost_wood": 25,
+    "premium_boost_clay": 25,
+    "premium_boost_iron": 25,
+    "barbarian_boost_wood": 35,
+    "barbarian_boost_clay": 35,
+    "barbarian_boost_iron": 35,
+    "premium_paladin_weapon": {
+      "spear": [50, 200, 350],
+      "sword": [50, 200, 350],
+      "axe": [50, 300, 450],
+      "archer": [50, 200, 350],
+      "light_cavalry": [50, 300, 450],
+      "mounted_archer": [50, 200, 350],
+      "heavy_cavalry": [50, 300, 450],
+      "ram": [50, 300, 450],
+      "catapult": [50, 300, 450],
+      "snob": [100, 400, 600]
+    },
+    "premium_paladin_instant": 35,
+    "premium_instant_build": {
+      "time_range": [180, 3600, 10800, 86400, 604800],
+      "crown_range": [10, 35, 80, 220, 400],
+      "time_fixed_price": [300],
+      "crowns_fixed_price": [3]
+    },
+    "premium_instant_recruit": {
+      "time_range": [180, 3600, 10800, 86400, 604800],
+      "crown_range": [10, 35, 80, 220, 400],
+      "time_fixed_price": [300],
+      "crowns_fixed_price": [3]
+    },
+    "premium_second_queue_job": 70,
+    "premium_build_cost_reduction": 50,
+    "premium_build_queue_slot": 70,
+    "premium_research": 100,
+    "premium_trade": 50,
+    "premium_instant_transport": 20,
+    "premium_reset_order": 70,
+    "premium_village_relocate_random": 50,
+    "premium_village_relocate_chosen": 125,
+    "premium_noob_protection": 100,
+    "premium_loot_protection": 30,
+    "daily_unit": 50,
+    "daily_unit_reroll": 10,
+    "resource_deposit_reroll": 15,
+    "premium_village_manager": 100,
+    "premium_gambling": 1,
+    "wheel_spin": 30,
+    "wheel_refill": 40
+  },
+  "WorldConfig/config": {
+    "speed": 1,
+    "widget_non_pacc_slots": 3,
+    "loyalty_after_conquer": 25,
+    "church": true,
+    "rally_point_speed_bonus": true,
+    "rally_point_speed_bonus_vs_barbarians": [1, 1.5, 2, 2.5, 3, 3.5],
+    "bathhouse": false,
+    "chapel_bonus": 1,
+    "church_bonus": [0.5, 1, 1.05, 1.1],
+    "doppelsoldner_bonus": 2,
+    "defender_superior": 2,
+    "super_value": 1.5,
+    "officer_mortality": 0.5,
+    "morale_days": 300,
+    "morale_start": 0.25,
+    "morale_end": 0.5,
+    "morale_factor": 3,
+    "farm_rule": 0,
+    "night_start_hour": 0,
+    "night_end_hour": 6,
+    "night_def_factor": 2,
+    "barbarian_spawn_rate": 2,
+    "barbarian_point_limit": 3500,
+    "noob_protection_days": 5,
+    "tribe_member_limit": 20,
+    "tribe_member_limit_ranking": 40,
+    "daily_unit_deal": 1,
+    "instant_recruit": 1,
+    "resource_deposits": 1,
+    "resource_deposit_ignore_world_speed": true,
+    "push_notifications": 1,
+    "second_village": true,
+    "second_village_ignore_world_speed": true,
+    "invite_to_map": true,
+    "invite_to_map_days": 14,
+    "second_queue_job": false,
+    "tribe_skills": true,
+    "barbarize_inactive_percent": 10,
+    "smart_tips": true,
+    "free_instant_build_seconds_per_level": 30,
+    "spy_speed_modifier": 2,
+    "spy_sabotage_speed_modifier": 0.5,
+    "spy_costs_1": { "wood": 500, "clay": 500, "iron": 500, "time": 2 },
+    "spy_costs_2": { "wood": 1000, "clay": 800, "iron": 1200, "time": 10 },
+    "spy_costs_3": { "wood": 2200, "clay": 2000, "iron": 2400, "time": 30 },
+    "spy_costs_4": { "wood": 7000, "clay": 6500, "iron": 8000, "time": 180 },
+    "spy_costs_5": { "wood": 12000, "clay": 10000, "iron": 18000, "time": 360 },
+    "relocate_units": false,
+    "mass_buildings": true,
+    "mass_recruiting": true,
+    "village_load_startup": 1,
+    "village_load_amount": 50,
+    "message_handling_tick": 150,
+    "sentry_backend": true,
+    "sentry_browser": false,
+    "sentry_android": true,
+    "sentry_ios": true,
+    "unified_game_time": true,
+    "building_completion_offers": true,
+    "language_selection": false,
+    "dynamic_filters_for_villages": true,
+    "victory_points": false,
+    "push_service_v1": true,
+    "coop": true,
+    "gdpr": true,
+    "sentry_browser_url": "https://01c53aa7f74140238f1ee2b48efddb2f@twx-sentry-events.innogames.de/5",
+    "sentry_android_url": "https://81373b7225ca4149ae00c8a908b9ddb6:60c80d5e589a4304827b3a37e204eac8@twx-sentry-events.innogames.de/6",
+    "sentry_ios_url": "https://dbed67f54c7b4c33aa99f85fbd31957a:19fa1d3f17a74569bc00bd64a675acd8@twx-sentry-events.innogames.de/7"
+  },
+  "Achievement/all": {
+    "loot": {
+      "name": "loot",
+      "category": "battle",
+      "levels": 5,
+      "repeatable": false,
+      "limits": [500, 10000, 100000, 1000000, 100000000],
+      "points": [10, 25, 40, 60, 80],
+      "rewards": [],
+      "milestone": false
+    },
+    "overkill": {
+      "name": "overkill",
+      "category": "battle",
+      "levels": 1,
+      "repeatable": false,
+      "limits": [10000],
+      "points": [50],
+      "rewards": [],
+      "milestone": false
+    },
+    "loot_daily": {
+      "name": "loot_daily",
+      "category": "repeatable",
+      "levels": 1,
+      "repeatable": true,
+      "limits": null,
+      "points": null,
+      "rewards": [],
+      "milestone": false
+    },
+    "conquest_milestone": {
+      "name": "conquest_milestone",
+      "category": "milestone",
+      "levels": 5,
+      "repeatable": false,
+      "limits": [2, 100, 250, 500, 1000],
+      "points": [30, 50, 70, 100, 150],
+      "rewards": [],
+      "milestone": true,
+      "world_level": 3,
+      "reached_levels": {
+        "1": false,
+        "2": false,
+        "3": false,
+        "4": false,
+        "5": false
+      }
+    },
+    "players_attacked_unique": {
+      "name": "players_attacked_unique",
+      "category": "battle",
+      "levels": 4,
+      "repeatable": false,
+      "limits": [10, 25, 100, 250],
+      "points": [10, 25, 40, 60],
+      "rewards": [],
+      "milestone": false
+    },
+    "villages_looted_unique": {
+      "name": "villages_looted_unique",
+      "category": "battle",
+      "levels": 4,
+      "repeatable": false,
+      "limits": [10, 100, 1000, 10000],
+      "points": [10, 25, 40, 60],
+      "rewards": [],
+      "milestone": false
+    },
+    "bash_points_offense": {
+      "name": "bash_points_offense",
+      "category": "battle",
+      "levels": 6,
+      "repeatable": false,
+      "limits": [500, 10000, 100000, 1000000, 10000000, 50000000],
+      "points": [10, 25, 40, 60, 80, 120],
+      "rewards": [],
+      "milestone": false
+    },
+    "bash_points_defense": {
+      "name": "bash_points_defense",
+      "category": "battle",
+      "levels": 6,
+      "repeatable": false,
+      "limits": [500, 10000, 100000, 1000000, 10000000, 50000000],
+      "points": [5, 10, 25, 40, 55, 70],
+      "rewards": [],
+      "milestone": false
+    },
+    "losses": {
+      "name": "losses",
+      "category": "battle",
+      "levels": 6,
+      "repeatable": false,
+      "limits": [100, 10000, 100000, 1000000, 10000000, 50000000],
+      "points": [5, 10, 25, 40, 55, 70],
+      "rewards": [],
+      "milestone": false
+    },
+    "losses_support": {
+      "name": "losses_support",
+      "category": "battle",
+      "levels": 5,
+      "repeatable": false,
+      "limits": [500, 7500, 20000, 100000, 1000000],
+      "points": [10, 25, 40, 60, 80],
+      "rewards": [],
+      "milestone": false
+    },
+    "self_attack": {
+      "name": "self_attack",
+      "category": "battle",
+      "levels": 4,
+      "repeatable": false,
+      "limits": [10, 100, 1000, 10000],
+      "points": [5, 10, 25, 40],
+      "rewards": [],
+      "milestone": false
+    },
+    "snobs_killed": {
+      "name": "snobs_killed",
+      "category": "battle",
+      "levels": 4,
+      "repeatable": false,
+      "limits": [25, 125, 350, 700],
+      "points": [30, 50, 70, 100],
+      "rewards": [],
+      "milestone": false
+    },
+    "major_battles_won": {
+      "name": "major_battles_won",
+      "category": "battle",
+      "levels": 4,
+      "repeatable": false,
+      "limits": [25, 250, 1500, 2500],
+      "points": [30, 50, 70, 100],
+      "rewards": [],
+      "milestone": false
+    },
+    "major_battles_supported": {
+      "name": "major_battles_supported",
+      "category": "battle",
+      "levels": 4,
+      "repeatable": false,
+      "limits": [50, 100, 500, 3000],
+      "points": [30, 50, 70, 100],
+      "rewards": [],
+      "milestone": false
+    },
+    "major_battle_perfect_defense": {
+      "name": "major_battle_perfect_defense",
+      "category": "battle",
+      "levels": 1,
+      "repeatable": false,
+      "limits": [1],
+      "points": [70],
+      "rewards": [],
+      "milestone": false
+    },
+    "major_battles_winning_streak": {
+      "name": "major_battles_winning_streak",
+      "category": "battle",
+      "levels": 5,
+      "repeatable": false,
+      "limits": [5, 10, 25, 50, 100],
+      "points": [30, 50, 70, 100, 150],
+      "rewards": [],
+      "milestone": false
+    },
+    "major_battle_defense_outnumbered": {
+      "name": "major_battle_defense_outnumbered",
+      "category": "battle",
+      "levels": 1,
+      "repeatable": false,
+      "limits": [1],
+      "points": [70],
+      "rewards": [],
+      "milestone": false
+    },
+    "building_levels_destroyed": {
+      "name": "building_levels_destroyed",
+      "category": "battle",
+      "levels": 4,
+      "repeatable": false,
+      "limits": [25, 250, 2500, 10000],
+      "points": [20, 40, 60, 80],
+      "rewards": [],
+      "milestone": false
+    },
+    "wall_levels_destroyed": {
+      "name": "wall_levels_destroyed",
+      "category": "battle",
+      "levels": 4,
+      "repeatable": false,
+      "limits": [25, 250, 2500, 10000],
+      "points": [20, 40, 60, 80],
+      "rewards": [],
+      "milestone": false
+    },
+    "villages_conquered_per_hour": {
+      "name": "villages_conquered_per_hour",
+      "category": "battle",
+      "levels": 4,
+      "repeatable": false,
+      "limits": [10, 25, 50, 100],
+      "points": [30, 50, 70, 100],
+      "rewards": [],
+      "milestone": false
+    },
+    "villages_conquered": {
+      "name": "villages_conquered",
+      "category": "ruler",
+      "levels": 4,
+      "repeatable": false,
+      "limits": [10, 50, 500, 1000],
+      "points": [30, 50, 70, 100],
+      "rewards": [],
+      "milestone": false
+    },
+    "conquest_lucky": {
+      "name": "conquest_lucky",
+      "category": "ruler",
+      "levels": 1,
+      "repeatable": false,
+      "limits": [1],
+      "points": [50],
+      "rewards": [],
+      "milestone": false
+    },
+    "conquest_unlucky": {
+      "name": "conquest_unlucky",
+      "category": "ruler",
+      "levels": 1,
+      "repeatable": false,
+      "limits": [1],
+      "points": [50],
+      "rewards": [],
+      "milestone": false
+    },
+    "village_owned_milestone_tribe": {
+      "name": "village_owned_milestone_tribe",
+      "category": "tribe",
+      "levels": 4,
+      "repeatable": false,
+      "limits": [500, 1000, 10000, 50000],
+      "points": [30, 50, 70, 100],
+      "rewards": [],
+      "milestone": true,
+      "world_level": 2,
+      "reached_levels": { "1": false, "2": false, "3": false, "4": false }
+    },
+    "village_conquered_milestone_tribe": {
+      "name": "village_conquered_milestone_tribe",
+      "category": "tribe",
+      "levels": 4,
+      "repeatable": false,
+      "limits": [50, 100, 1000, 10000],
+      "points": [30, 50, 70, 100],
+      "rewards": [],
+      "milestone": true,
+      "world_level": 3,
+      "reached_levels": { "1": false, "2": false, "3": false, "4": false }
+    },
+    "points_milestone_tribe": {
+      "name": "points_milestone_tribe",
+      "category": "tribe",
+      "levels": 5,
+      "repeatable": false,
+      "limits": [100000, 1000000, 10000000, 100000000, 1000000000],
+      "points": [30, 50, 70, 100, 150],
+      "rewards": [],
+      "milestone": true,
+      "world_level": 3,
+      "reached_levels": {
+        "1": false,
+        "2": false,
+        "3": false,
+        "4": false,
+        "5": false
+      }
+    },
+    "units_killed_milestone_tribe": {
+      "name": "units_killed_milestone_tribe",
+      "category": "tribe",
+      "levels": 6,
+      "repeatable": false,
+      "limits": [100000, 1000000, 10000000, 100000000, 1000000000, 10000000000],
+      "points": [30, 50, 70, 100, 150, 250],
+      "rewards": [],
+      "milestone": true,
+      "world_level": 4,
+      "reached_levels": {
+        "1": false,
+        "2": false,
+        "3": false,
+        "4": false,
+        "5": false,
+        "6": false
+      }
+    },
+    "self_conquest": {
+      "name": "self_conquest",
+      "category": "ruler",
+      "levels": 1,
+      "repeatable": false,
+      "limits": [1],
+      "points": [50],
+      "rewards": [],
+      "milestone": false
+    },
+    "recruited_infantry": {
+      "name": "recruited_infantry",
+      "category": "special",
+      "levels": 6,
+      "repeatable": false,
+      "limits": [500, 2500, 10000, 100000, 1000000, 10000000],
+      "points": [10, 25, 40, 60, 80, 120],
+      "rewards": [],
+      "milestone": false
+    },
+    "recruited_cavalry": {
+      "name": "recruited_cavalry",
+      "category": "special",
+      "levels": 5,
+      "repeatable": false,
+      "limits": [500, 2500, 10000, 100000, 1000000],
+      "points": [10, 25, 40, 60, 80],
+      "rewards": [],
+      "milestone": false
+    },
+    "recruited_siege_weapons": {
+      "name": "recruited_siege_weapons",
+      "category": "special",
+      "levels": 5,
+      "repeatable": false,
+      "limits": [500, 2500, 10000, 100000, 1000000],
+      "points": [10, 25, 40, 60, 80],
+      "rewards": [],
+      "milestone": false
+    },
+    "looted_village_daily": {
+      "name": "looted_village_daily",
+      "category": "repeatable",
+      "levels": 1,
+      "repeatable": true,
+      "limits": null,
+      "points": null,
+      "rewards": [],
+      "milestone": false
+    },
+    "attack_daily": {
+      "name": "attack_daily",
+      "category": "repeatable",
+      "levels": 1,
+      "repeatable": true,
+      "limits": null,
+      "points": null,
+      "rewards": [],
+      "milestone": false
+    },
+    "defend_daily": {
+      "name": "defend_daily",
+      "category": "repeatable",
+      "levels": 1,
+      "repeatable": true,
+      "limits": null,
+      "points": null,
+      "rewards": [],
+      "milestone": false
+    },
+    "conquered_daily": {
+      "name": "conquered_daily",
+      "category": "repeatable",
+      "levels": 1,
+      "repeatable": true,
+      "limits": null,
+      "points": null,
+      "rewards": [],
+      "milestone": false
+    },
+    "most_battle_daily": {
+      "name": "most_battle_daily",
+      "category": "repeatable",
+      "levels": 1,
+      "repeatable": true,
+      "limits": null,
+      "points": null,
+      "rewards": [],
+      "milestone": false
+    },
+    "loot_weekly": {
+      "name": "loot_weekly",
+      "category": "repeatable",
+      "levels": 1,
+      "repeatable": true,
+      "limits": null,
+      "points": null,
+      "rewards": [],
+      "milestone": false
+    },
+    "looted_village_weekly": {
+      "name": "looted_village_weekly",
+      "category": "repeatable",
+      "levels": 1,
+      "repeatable": true,
+      "limits": null,
+      "points": null,
+      "rewards": [],
+      "milestone": false
+    },
+    "attack_weekly": {
+      "name": "attack_weekly",
+      "category": "repeatable",
+      "levels": 1,
+      "repeatable": true,
+      "limits": null,
+      "points": null,
+      "rewards": [],
+      "milestone": false
+    },
+    "defend_weekly": {
+      "name": "defend_weekly",
+      "category": "repeatable",
+      "levels": 1,
+      "repeatable": true,
+      "limits": null,
+      "points": null,
+      "rewards": [],
+      "milestone": false
+    },
+    "conquered_weekly": {
+      "name": "conquered_weekly",
+      "category": "repeatable",
+      "levels": 1,
+      "repeatable": true,
+      "limits": null,
+      "points": null,
+      "rewards": [],
+      "milestone": false
+    },
+    "most_battle_weekly": {
+      "name": "most_battle_weekly",
+      "category": "repeatable",
+      "levels": 1,
+      "repeatable": true,
+      "limits": null,
+      "points": null,
+      "rewards": [],
+      "milestone": false
+    },
+    "loot_daily_tribe": {
+      "name": "loot_daily_tribe",
+      "category": "tribe",
+      "levels": 1,
+      "repeatable": true,
+      "limits": null,
+      "points": null,
+      "rewards": [],
+      "milestone": false
+    },
+    "looted_village_daily_tribe": {
+      "name": "looted_village_daily_tribe",
+      "category": "tribe",
+      "levels": 1,
+      "repeatable": true,
+      "limits": null,
+      "points": null,
+      "rewards": [],
+      "milestone": false
+    },
+    "attack_daily_tribe": {
+      "name": "attack_daily_tribe",
+      "category": "tribe",
+      "levels": 1,
+      "repeatable": true,
+      "limits": null,
+      "points": null,
+      "rewards": [],
+      "milestone": false
+    },
+    "defend_daily_tribe": {
+      "name": "defend_daily_tribe",
+      "category": "tribe",
+      "levels": 1,
+      "repeatable": true,
+      "limits": null,
+      "points": null,
+      "rewards": [],
+      "milestone": false
+    },
+    "conquered_daily_tribe": {
+      "name": "conquered_daily_tribe",
+      "category": "tribe",
+      "levels": 1,
+      "repeatable": true,
+      "limits": null,
+      "points": null,
+      "rewards": [],
+      "milestone": false
+    },
+    "most_battle_daily_tribe": {
+      "name": "most_battle_daily_tribe",
+      "category": "tribe",
+      "levels": 1,
+      "repeatable": true,
+      "limits": null,
+      "points": null,
+      "rewards": [],
+      "milestone": false
+    },
+    "loot_weekly_tribe": {
+      "name": "loot_weekly_tribe",
+      "category": "tribe",
+      "levels": 1,
+      "repeatable": true,
+      "limits": null,
+      "points": null,
+      "rewards": [],
+      "milestone": false
+    },
+    "looted_village_weekly_tribe": {
+      "name": "looted_village_weekly_tribe",
+      "category": "tribe",
+      "levels": 1,
+      "repeatable": true,
+      "limits": null,
+      "points": null,
+      "rewards": [],
+      "milestone": false
+    },
+    "attack_weekly_tribe": {
+      "name": "attack_weekly_tribe",
+      "category": "tribe",
+      "levels": 1,
+      "repeatable": true,
+      "limits": null,
+      "points": null,
+      "rewards": [],
+      "milestone": false
+    },
+    "defend_weekly_tribe": {
+      "name": "defend_weekly_tribe",
+      "category": "tribe",
+      "levels": 1,
+      "repeatable": true,
+      "limits": null,
+      "points": null,
+      "rewards": [],
+      "milestone": false
+    },
+    "conquered_weekly_tribe": {
+      "name": "conquered_weekly_tribe",
+      "category": "tribe",
+      "levels": 1,
+      "repeatable": true,
+      "limits": null,
+      "points": null,
+      "rewards": [],
+      "milestone": false
+    },
+    "most_battle_weekly_tribe": {
+      "name": "most_battle_weekly_tribe",
+      "category": "tribe",
+      "levels": 1,
+      "repeatable": true,
+      "limits": null,
+      "points": null,
+      "rewards": [],
+      "milestone": false
+    },
+    "max_level_churches": {
+      "name": "max_level_churches",
+      "category": "special",
+      "levels": 4,
+      "repeatable": false,
+      "limits": [2, 6, 10, 15],
+      "points": [20, 40, 60, 80],
+      "rewards": [],
+      "milestone": false
+    },
+    "max_level_markets": {
+      "name": "max_level_markets",
+      "category": "special",
+      "levels": 4,
+      "repeatable": false,
+      "limits": [5, 10, 15, 20],
+      "points": [10, 25, 40, 60],
+      "rewards": [],
+      "milestone": false
+    },
+    "max_level_walls": {
+      "name": "max_level_walls",
+      "category": "special",
+      "levels": 4,
+      "repeatable": false,
+      "limits": [5, 10, 15, 30],
+      "points": [10, 25, 40, 60],
+      "rewards": [],
+      "milestone": false
+    },
+    "max_level_taverns": {
+      "name": "max_level_taverns",
+      "category": "special",
+      "levels": 4,
+      "repeatable": false,
+      "limits": [5, 10, 15, 20],
+      "points": [10, 25, 40, 60],
+      "rewards": [],
+      "milestone": false
+    },
+    "max_level_barracks": {
+      "name": "max_level_barracks",
+      "category": "special",
+      "levels": 4,
+      "repeatable": false,
+      "limits": [5, 10, 15, 30],
+      "points": [10, 25, 40, 60],
+      "rewards": [],
+      "milestone": false
+    },
+    "max_level_resources": {
+      "name": "max_level_resources",
+      "category": "special",
+      "levels": 4,
+      "repeatable": false,
+      "limits": [15, 30, 45, 90],
+      "points": [10, 25, 40, 60],
+      "rewards": [],
+      "milestone": false
+    },
+    "max_level_farms": {
+      "name": "max_level_farms",
+      "category": "special",
+      "levels": 4,
+      "repeatable": false,
+      "limits": [5, 10, 15, 30],
+      "points": [10, 25, 40, 60],
+      "rewards": [],
+      "milestone": false
+    },
+    "max_level_preceptories": {
+      "name": "max_level_preceptories",
+      "category": "special",
+      "levels": 4,
+      "repeatable": false,
+      "limits": [2, 6, 10, 15],
+      "points": [20, 40, 60, 80],
+      "rewards": [],
+      "milestone": false
+    },
+    "scouting_thwarted": {
+      "name": "scouting_thwarted",
+      "category": "special",
+      "levels": 4,
+      "repeatable": false,
+      "limits": [25, 50, 250, 500],
+      "points": [10, 25, 40, 60],
+      "rewards": [],
+      "milestone": false
+    },
+    "scouting_success": {
+      "name": "scouting_success",
+      "category": "special",
+      "levels": 4,
+      "repeatable": false,
+      "limits": [25, 50, 250, 500],
+      "points": [20, 40, 60, 80],
+      "rewards": [],
+      "milestone": false
+    },
+    "scouts_killed_attacker": {
+      "name": "scouts_killed_attacker",
+      "category": "special",
+      "levels": 4,
+      "repeatable": false,
+      "limits": [5, 50, 100, 250],
+      "points": [20, 40, 60, 80],
+      "rewards": [],
+      "milestone": false
+    },
+    "scouts_killed_defender": {
+      "name": "scouts_killed_defender",
+      "category": "special",
+      "levels": 4,
+      "repeatable": false,
+      "limits": [5, 50, 100, 250],
+      "points": [10, 25, 40, 60],
+      "rewards": [],
+      "milestone": false
+    },
+    "minted_coins": {
+      "name": "minted_coins",
+      "category": "special",
+      "levels": 4,
+      "repeatable": false,
+      "limits": [50, 500, 5000, 50000],
+      "points": [20, 40, 60, 80],
+      "rewards": [],
+      "milestone": false
+    },
+    "doppelsoeldner_outnumbered": {
+      "name": "doppelsoeldner_outnumbered",
+      "category": "special",
+      "levels": 5,
+      "repeatable": false,
+      "limits": [5, 10, 15, 25, 50],
+      "points": [30, 50, 70, 100, 150],
+      "rewards": [],
+      "milestone": false
+    },
+    "trebuchet_kills": {
+      "name": "trebuchet_kills",
+      "category": "special",
+      "levels": 5,
+      "repeatable": false,
+      "limits": [50, 100, 250, 500, 1000],
+      "points": [30, 50, 70, 100, 150],
+      "rewards": [],
+      "milestone": false
+    },
+    "villages_lost_milestone": {
+      "name": "villages_lost_milestone",
+      "category": "milestone",
+      "levels": 5,
+      "repeatable": false,
+      "limits": [1, 100, 250, 500, 1000],
+      "points": [30, 50, 70, 100, 150],
+      "rewards": [],
+      "milestone": true,
+      "world_level": 2,
+      "reached_levels": {
+        "1": false,
+        "2": false,
+        "3": false,
+        "4": false,
+        "5": false
+      }
+    },
+    "achievement_points_milestone": {
+      "name": "achievement_points_milestone",
+      "category": "milestone",
+      "levels": 1,
+      "repeatable": false,
+      "limits": [15655],
+      "points": [70],
+      "rewards": [],
+      "milestone": true,
+      "world_level": 0,
+      "reached_levels": { "1": false }
+    },
+    "bash_points_milestone": {
+      "name": "bash_points_milestone",
+      "category": "milestone",
+      "levels": 5,
+      "repeatable": false,
+      "limits": [10000, 1000000, 5000000, 25000000, 100000000],
+      "points": [30, 50, 70, 100, 150],
+      "rewards": [],
+      "milestone": true,
+      "world_level": 4,
+      "reached_levels": {
+        "1": false,
+        "2": false,
+        "3": false,
+        "4": false,
+        "5": false
+      }
+    },
+    "resources_delivered": {
+      "name": "resources_delivered",
+      "category": "special",
+      "levels": 5,
+      "repeatable": false,
+      "limits": [5000, 10000, 100000, 1000000, 50000000],
+      "points": [10, 25, 40, 60, 80],
+      "rewards": [],
+      "milestone": false
+    },
+    "resources_traded_wood": {
+      "name": "resources_traded_wood",
+      "category": "special",
+      "levels": 5,
+      "repeatable": false,
+      "limits": [5000, 10000, 100000, 1000000, 50000000],
+      "points": [10, 25, 40, 60, 80],
+      "rewards": [],
+      "milestone": false
+    },
+    "resources_traded_clay": {
+      "name": "resources_traded_clay",
+      "category": "special",
+      "levels": 5,
+      "repeatable": false,
+      "limits": [5000, 10000, 100000, 1000000, 50000000],
+      "points": [10, 25, 40, 60, 80],
+      "rewards": [],
+      "milestone": false
+    },
+    "resources_traded_iron": {
+      "name": "resources_traded_iron",
+      "category": "special",
+      "levels": 5,
+      "repeatable": false,
+      "limits": [5000, 10000, 100000, 1000000, 50000000],
+      "points": [10, 25, 40, 60, 80],
+      "rewards": [],
+      "milestone": false
+    },
+    "trades_completed": {
+      "name": "trades_completed",
+      "category": "special",
+      "levels": 6,
+      "repeatable": false,
+      "limits": [10, 50, 100, 500, 1000, 10000],
+      "points": [10, 25, 40, 60, 80, 120],
+      "rewards": [],
+      "milestone": false
+    },
+    "trades_completed_seller": {
+      "name": "trades_completed_seller",
+      "category": "special",
+      "levels": 6,
+      "repeatable": false,
+      "limits": [10, 50, 100, 500, 1000, 10000],
+      "points": [10, 25, 40, 60, 80, 120],
+      "rewards": [],
+      "milestone": false
+    },
+    "trades_completed_buyer": {
+      "name": "trades_completed_buyer",
+      "category": "special",
+      "levels": 6,
+      "repeatable": false,
+      "limits": [10, 50, 100, 500, 1000, 10000],
+      "points": [10, 25, 40, 60, 80, 120],
+      "rewards": [],
+      "milestone": false
+    },
+    "first_units_recruited": {
+      "name": "first_units_recruited",
+      "category": "special",
+      "levels": 1,
+      "repeatable": false,
+      "limits": [20],
+      "points": [30],
+      "rewards": [],
+      "milestone": false
+    },
+    "first_attacks_made": {
+      "name": "first_attacks_made",
+      "category": "battle",
+      "levels": 1,
+      "repeatable": false,
+      "limits": [3],
+      "points": [30],
+      "rewards": [],
+      "milestone": false
+    },
+    "first_units_killed": {
+      "name": "first_units_killed",
+      "category": "battle",
+      "levels": 1,
+      "repeatable": false,
+      "limits": [50],
+      "points": [30],
+      "rewards": [],
+      "milestone": false
+    },
+    "first_mixed_attack": {
+      "name": "first_mixed_attack",
+      "category": "battle",
+      "levels": 1,
+      "repeatable": false,
+      "limits": [1],
+      "points": [30],
+      "rewards": [],
+      "milestone": false
+    },
+    "first_paladin_kill": {
+      "name": "first_paladin_kill",
+      "category": "special",
+      "levels": 1,
+      "repeatable": false,
+      "limits": [1],
+      "points": [30],
+      "rewards": [],
+      "milestone": false
+    },
+    "first_resources_spent": {
+      "name": "first_resources_spent",
+      "category": "special",
+      "levels": 1,
+      "repeatable": false,
+      "limits": [10000],
+      "points": [30],
+      "rewards": [],
+      "milestone": false
+    },
+    "first_resource_production": {
+      "name": "first_resource_production",
+      "category": "special",
+      "levels": 1,
+      "repeatable": false,
+      "limits": [1000],
+      "points": [30],
+      "rewards": [],
+      "milestone": false
+    },
+    "first_building_leveled_up": {
+      "name": "first_building_leveled_up",
+      "category": "special",
+      "levels": 1,
+      "repeatable": false,
+      "limits": [3],
+      "points": [30],
+      "rewards": [],
+      "milestone": false
+    },
+    "level_two_churches_milestone": {
+      "name": "level_two_churches_milestone",
+      "category": "milestone",
+      "levels": 5,
+      "repeatable": false,
+      "limits": [1, 5, 10, 25, 50],
+      "points": [30, 50, 70, 100, 150],
+      "rewards": [],
+      "milestone": true,
+      "world_level": 3,
+      "reached_levels": {
+        "1": false,
+        "2": false,
+        "3": false,
+        "4": false,
+        "5": false
+      }
+    },
+    "village_points": {
+      "name": "village_points",
+      "category": "points",
+      "levels": 5,
+      "repeatable": false,
+      "limits": [500, 1000, 5000, 10000, 11216],
+      "points": [10, 25, 40, 60, 80],
+      "rewards": [],
+      "milestone": false
+    },
+    "large_villages_owned": {
+      "name": "large_villages_owned",
+      "category": "points",
+      "levels": 4,
+      "repeatable": false,
+      "limits": [5, 10, 25, 50],
+      "points": [20, 40, 60, 80],
+      "rewards": [],
+      "milestone": false
+    },
+    "huge_villages_owned": {
+      "name": "huge_villages_owned",
+      "category": "points",
+      "levels": 4,
+      "repeatable": false,
+      "limits": [5, 10, 25, 50],
+      "points": [30, 50, 70, 100],
+      "rewards": [],
+      "milestone": false
+    },
+    "province_king_milestone": {
+      "name": "province_king_milestone",
+      "category": "milestone",
+      "levels": 1,
+      "repeatable": false,
+      "limits": [1],
+      "points": [70],
+      "rewards": [],
+      "milestone": true,
+      "world_level": 1,
+      "reached_levels": { "1": false }
+    },
+    "province_fully_owned_milestone": {
+      "name": "province_fully_owned_milestone",
+      "category": "milestone",
+      "levels": 1,
+      "repeatable": false,
+      "limits": [1],
+      "points": [70],
+      "rewards": [],
+      "milestone": true,
+      "world_level": 0,
+      "reached_levels": { "1": false }
+    },
+    "continent_owned_milestone_tribe": {
+      "name": "continent_owned_milestone_tribe",
+      "category": "tribe",
+      "levels": 1,
+      "repeatable": false,
+      "limits": [1],
+      "points": [70],
+      "rewards": [],
+      "milestone": true,
+      "world_level": 0,
+      "reached_levels": { "1": false }
+    },
+    "provinces_owned_milestone_tribe": {
+      "name": "provinces_owned_milestone_tribe",
+      "category": "tribe",
+      "levels": 4,
+      "repeatable": false,
+      "limits": [1, 3, 6, 10],
+      "points": [30, 50, 70, 100],
+      "rewards": [],
+      "milestone": true,
+      "world_level": 4,
+      "reached_levels": { "1": false, "2": false, "3": false, "4": false }
+    },
+    "tribe_membership_days": {
+      "name": "tribe_membership_days",
+      "category": "friends",
+      "levels": 4,
+      "repeatable": false,
+      "limits": [30, 60, 180, 360],
+      "points": [10, 25, 40, 60],
+      "rewards": [],
+      "milestone": false
+    },
+    "coop_players": {
+      "name": "coop_players",
+      "category": "friends",
+      "levels": 2,
+      "repeatable": false,
+      "limits": [1, 2],
+      "points": [10, 25],
+      "rewards": [],
+      "milestone": false
+    },
+    "points": {
+      "name": "points",
+      "category": "points",
+      "levels": 7,
+      "repeatable": false,
+      "limits": [100, 5000, 25000, 50000, 100000, 1000000, 100000000],
+      "points": [10, 25, 40, 60, 80, 150, 200],
+      "rewards": [],
+      "milestone": false
+    },
+    "ranking_global": {
+      "name": "ranking_global",
+      "category": "points",
+      "levels": 5,
+      "repeatable": false,
+      "limits": [1000, 100, 20, 5, 1],
+      "points": [30, 50, 70, 100, 150],
+      "rewards": [],
+      "milestone": false
+    },
+    "ranking_continent": {
+      "name": "ranking_continent",
+      "category": "points",
+      "levels": 5,
+      "repeatable": false,
+      "limits": [100, 50, 20, 5, 1],
+      "points": [30, 50, 70, 100, 150],
+      "rewards": [],
+      "milestone": false
+    }
+  }
+}

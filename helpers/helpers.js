@@ -9,6 +9,8 @@ const username = "joza2017";
 const password = "password";
 const settingsPath = global.settingsPath;
 
+let storageObj = {};
+
 function fileExCheck() {
   fs.stat(settingsPath, function(err, stat) {
     err == null && console.log(true);
@@ -29,6 +31,9 @@ let setupArray = { username: username, password: password };
 function setup() {
   write.settings(setupArray);
 }
+
+//handle Game Batch Data
+const storeVillageData = dataObj => {};
 
 //get the resource infos
 const getVillageInfo = dataObj => {

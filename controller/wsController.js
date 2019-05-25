@@ -6,6 +6,7 @@ const keys = require("../helpers/keywords");
 const request = require("../models/request");
 const requests = require("../helpers/requests");
 const controller = require("./controller");
+const helpers = require("../helpers/helpers");
 
 //let wsocket;
 let obj;
@@ -13,13 +14,16 @@ let json;
 
 const runConn = wsServerLocation => {
   const ws = new WebSocket(wsServerLocation);
+
+  const refreshConnection = setInterval(function() {
+    ws.send(2);
+    console.log(Date());
+  }, 25000);
+
   request.updateWs(ws);
   ws.on("open", function open() {
     requests.passwordLogin();
-    setInterval(function() {
-      ws.send(2);
-      console.log(Date());
-    }, 25000);
+    refreshConnection;
   });
 
   ws.on("message", function incoming(data) {
@@ -41,9 +45,17 @@ const runConn = wsServerLocation => {
           write.settings(objData);
           requests.gameInfo();
         } else if (obj[1].type === "GameDataBatch/gameData") {
+          //GAME DATA most of the time not changed
+          //write.settings(objData, "gameData");
+
           requests.villageInfo();
         } else if (obj[1].type === "VillageBatch/villageData") {
           controller.controller(objData);
+        } else if (obj[1].type === "Building/levelChanged") {
+          const uB = obj[1].data.building;
+          if (uB === "timber_camp" || uB === "clay_pit" || uB === "iron_mine") {
+            requests.villageInfo();
+          }
         } else {
         }
       } else {
@@ -57,6 +69,7 @@ const runConn = wsServerLocation => {
 
   ws.onclose = () => {
     console.log("Connection is closed");
+    clearInterval(refreshConnection);
     runConn(wsServerLocation);
   };
 };

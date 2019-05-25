@@ -16,8 +16,11 @@ global.settingsPath = "settings.json";
 global.uUsername = read.settings(global.username);
 global.uPassword = read.settings(global.password);
 global.uToken = read.settings(global.userToken);
-global.uPlayerID = read.settings(global.playerID);
-global.uVillageID = read.settings("villageId");
+//global.uPlayerID = read.settings(global.playerID);
+//global.uVillageID = read.settings("villageId");
+global.uPlayerID = "613926";
+global.uVillageID = "22258";
+global.uWorldID = "de36";
 
 //requestTypes
 global.rLoginType = "Authentication/login";
@@ -36,10 +39,10 @@ global.rPasswordLoginData = {
   pass: global.uPassword
 };
 global.rTokenLoginData = { name: global.uUsername, token: global.uToken };
-global.rSelectCharData = { id: global.uPlayerID, world_id: "de40" };
+global.rSelectCharData = { id: global.uPlayerID, world_id: global.uWorldID };
 global.rUpgradeClayData = {
   building: "clay_pit",
-  village_id: 9571,
+  village_id: global.uVillageID,
   location: "menu",
   premium: false
 };
@@ -47,21 +50,21 @@ global.rUpgradeTimberData = {
   building: "timber_camp",
   location: "menu",
   premium: false,
-  village_id: 9571
+  village_id: global.uVillageID
 };
 global.rUpgradeIronData = {
   building: "iron_mine",
   location: "menu",
   premium: false,
-  village_id: 9571
+  village_id: global.uVillageID
 };
 global.rUpgradeFarmData = {
   building: "farm",
   location: "menu",
   premium: false,
-  village_id: 9571
+  village_id: global.uVillageID
 };
 
 global.rVillageResourceData = {
-  village_ids: [9571]
+  village_ids: [global.uVillageID]
 };

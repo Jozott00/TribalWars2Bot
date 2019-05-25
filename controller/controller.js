@@ -3,6 +3,7 @@ const requests = require("../helpers/requests");
 const keys = require("../helpers/keywords");
 
 const shouldUpgradeFarms = true;
+const timerRunning = false;
 
 const controller = dataObj => {
   shouldUpgradeFarms && upgradeFarms(dataObj);
@@ -51,9 +52,10 @@ const upgradeFarms = dataObj => {
     }
   } else console.log("----------- Bauschleife ist voll");
 
-  setTimeout(() => {
-    requests.villageInfo();
-  }, 300000);
+  !timerRunning &&
+    setTimeout(() => {
+      requests.villageInfo();
+    }, 100000);
 };
 
 exports.controller = controller;

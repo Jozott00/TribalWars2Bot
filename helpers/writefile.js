@@ -4,14 +4,14 @@ const keys = require("./keywords");
 
 let obj = {};
 let json;
-const settings = "./data/settings.json";
 
-function overrideSettings(inputArray) {
-  fs.readFile(settings, function(err, data) {
+function overrideSettings(inputArray, filename = "settings") {
+  file = "./data/" + filename + ".json";
+  fs.readFile(file, function(err, data) {
     if (err) {
       obj = inputArray;
       json = JSON.stringify(obj);
-      fs.writeFile(settings, json, function(err) {
+      fs.writeFile(file, json, function(err) {
         if (err) {
           console.log(err);
         }
@@ -22,7 +22,7 @@ function overrideSettings(inputArray) {
         obj[key] = inputArray[key];
       }
       json = JSON.stringify(obj);
-      fs.writeFile(settings, json, function(err) {
+      fs.writeFile(file, json, function(err) {
         if (err) {
           console.log(err);
         }
