@@ -14,12 +14,16 @@ const characterLogin = () => {
   request.createRequest(global.rSelectCharType, 3, global.rSelectCharData);
 };
 
+//Data Info Requests
 const villageInfo = () => {
   request.createRequest(
     global.rVillageResourceType,
     25,
     global.rVillageResourceData
   );
+};
+const gameInfo = () => {
+  request.createRequest("GameDataBatch/getGameData", 4);
 };
 
 //Farm Buildings Upgrade Call
@@ -60,5 +64,6 @@ module.exports = {
   farmUpgrade,
   tokenLogin,
   passwordLogin,
-  characterLogin
+  characterLogin,
+  gameInfo
 };

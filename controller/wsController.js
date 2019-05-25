@@ -11,23 +11,17 @@ const controller = require("./controller");
 let obj;
 let json;
 
-const ws = new WebSocket(
-  "wss://de.tribalwars2.com/socket.io/?platform=desktop&EIO=3&transport=websocket"
-);
-
-const startConn = () => {
+const runConn = wsServerLocation => {
+  const ws = new WebSocket(wsServerLocation);
   request.updateWs(ws);
-
   ws.on("open", function open() {
     requests.passwordLogin();
+    setInterval(function() {
+      ws.send(2);
+      console.log(Date());
+    }, 25000);
   });
-  setInterval(function() {
-    ws.send(2);
-    console.log(Date());
-  }, 25000);
-};
 
-const listenConn = () => {
   ws.on("message", function incoming(data) {
     console.log("INCOMING ... " + data);
     if (data.substring(0, 2) === "42") {
@@ -45,6 +39,8 @@ const listenConn = () => {
           request.createRequest(global.rGetInfoCharType, 13, {});
         } else if (obj[1].type === "Character/info") {
           write.settings(objData);
+          requests.gameInfo();
+        } else if (obj[1].type === "GameDataBatch/gameData") {
           requests.villageInfo();
         } else if (obj[1].type === "VillageBatch/villageData") {
           controller.controller(objData);
@@ -59,15 +55,12 @@ const listenConn = () => {
     }
   });
 
-  setTimeout(function() {
-    ws.on("close", function close() {
-      console.log("connection should be closed");
-      app.runApp();
-    });
-  }, 40000);
+  ws.onclose = () => {
+    console.log("Connection is closed");
+    runConn(wsServerLocation);
+  };
 };
 
 module.exports = {
-  startConn,
-  listenConn
+  runConn
 };
