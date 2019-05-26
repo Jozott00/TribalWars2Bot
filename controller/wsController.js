@@ -2,11 +2,10 @@ const WebSocket = require("ws");
 
 const app = require("../app");
 const write = require("../helpers/writefile");
-const keys = require("../helpers/keywords");
 const request = require("../models/request");
 const requests = require("../helpers/requests");
 const controller = require("./controller");
-const helpers = require("../helpers/helpers");
+const globalsHelper = require("../helpers/globals.helper");
 
 //let wsocket;
 let obj;
@@ -70,7 +69,11 @@ const runConn = wsServerLocation => {
           requests.characterLogin();
         } else if (obj[1].type === "Authentication/characterSelected") {
           write.settings(objData, "settings");
-          request.createRequest(global.rGetInfoCharType, 13, {});
+          request.createRequest(
+            globalsHelper.requestProps.getInfoCharType,
+            13,
+            {}
+          );
         } else if (obj[1].type === "Character/info") {
           write.settings(objData, "settings");
           requests.gameInfo();
