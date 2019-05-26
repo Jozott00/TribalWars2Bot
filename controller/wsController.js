@@ -12,6 +12,36 @@ const helpers = require("../helpers/helpers");
 let obj;
 let json;
 
+const getToken = wsServerLocation => {
+  const ws = new WebSocket(wsServerLocation);
+  request.updateWs(ws);
+  ws.on("open", () => {
+    requests.passwordLogin();
+    console.log("Login ...");
+  });
+
+  ws.on("message", data => {
+    if (data.substring(0, 2) === "42") {
+      obj = JSON.parse(data.substring(2));
+
+      const newToken = obj[1].data.token;
+      const at = "securitySettings.token";
+
+      switch (obj[1].type) {
+        case "Login/success":
+          write.settings(newToken, "userSettings");
+          console.log("Token stored in Settings");
+          break;
+        case "System/error":
+          console.log("Error: " + obj[1].data.message);
+          break;
+        default:
+          break;
+      }
+    }
+  });
+};
+
 const runConn = wsServerLocation => {
   const ws = new WebSocket(wsServerLocation);
 
@@ -75,5 +105,6 @@ const runConn = wsServerLocation => {
 };
 
 module.exports = {
-  runConn
+  runConn,
+  getToken
 };

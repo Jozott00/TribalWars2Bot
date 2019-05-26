@@ -55,7 +55,7 @@ const upgradeFarms = dataObj => {
   !timerRunning &&
     setTimeout(() => {
       requests.villageInfo();
-    }, 100000);
+    }, 300000);
 };
 
 exports.controller = controller;

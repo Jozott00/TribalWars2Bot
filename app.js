@@ -15,6 +15,7 @@ const runApp = () => {
   helpers.setup();
 
   wsController.runConn(wsServerLocation);
+  // wsController.getToken(wsServerLocation);
 };
 
 runApp();
