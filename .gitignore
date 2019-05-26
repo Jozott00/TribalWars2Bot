@@ -1,1 +1,40 @@
+# COMPILED OUTPUT
+**/dist
+**/tmp
+**/out-tsc
+
+# DEPENDENCIES
 **/node_modules
+
+# DOTENV
+**/.env
+
+# IDES AND EDITORS
+**/.idea
+**/.project
+**/.classpath
+**/.c9/
+**/*.launch
+**/.settings/
+**/*.sublime-workspace
+
+# IDE - VSCODE
+**/.vscode/*
+**/!.vscode/settings.json
+**/!.vscode/tasks.json
+**/!.vscode/launch.json
+**/!.vscode/extensions.json
+
+# MISC
+**/.sass-cache
+**/connect.lock
+**/coverage
+**/libpeerconnection.log
+**/npm-debug.log
+**/yarn-error.log
+**/testem.log
+**/typings
+
+# SYSTEM FILES
+**/.DS_Store
+**/Thumbs.db
