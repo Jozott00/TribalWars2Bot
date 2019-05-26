@@ -2,12 +2,11 @@ const fs = require("fs");
 
 const write = require("./writefile");
 const read = require("./readfile");
-const keys = require("./keywords");
+const globalHelpers = require("./globals.helper");
 const request = require("../models/request");
-
 const username = "joza2017";
 const password = "password";
-const settingsPath = global.settingsPath;
+const settingsPath = globalHelpers.selectors.settingsPath;
 
 let storageObj = {};
 
@@ -37,7 +36,7 @@ const storeVillageData = dataObj => {};
 
 //get the resource infos
 const getVillageInfo = dataObj => {
-  const villageID = global.uVillageID;
+  const villageID = globalHelpers.user.villageID;
   const villageInfo = dataObj[villageID]["Village/village"];
   const villageQueue = dataObj[villageID]["Building/queue"].queue;
   const storage = villageInfo.storage;

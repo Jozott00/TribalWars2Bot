@@ -1,6 +1,5 @@
 const helpers = require("../helpers/helpers");
 const requests = require("../helpers/requests");
-const keys = require("../helpers/keywords");
 
 const shouldUpgradeFarms = true;
 const timerRunning = false;

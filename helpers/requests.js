@@ -1,58 +1,70 @@
 const request = require("../models/request");
-const keys = require("./keywords");
+const globalsHelpers = require("./globals.helper");
 
 //´REQUESTS FOR THE API
 
 //Login Requests
-const tokenLogin = () => {
-  request.createRequest(global.rLoginType, 2, global.rTokenLoginData);
-};
 const passwordLogin = () => {
-  request.createRequest(global.rLoginType, 2, global.rPasswordLoginData);
+  request.createRequest(
+    globalsHelpers.requestProps.loginType,
+    2,
+    globalsHelpers.requestProps.passwordLoginData
+  );
+};
+const tokenLogin = () => {
+  request.createRequest(
+    globalsHelpers.requestProps.loginType,
+    2,
+    globalsHelpers.requestProps.tokenLoginData
+  );
 };
 const characterLogin = () => {
-  request.createRequest(global.rSelectCharType, 3, global.rSelectCharData);
+  request.createRequest(
+    globalsHelpers.requestProps.selectCharType,
+    3,
+    globalsHelpers.requestProps.selectCharData
+  );
 };
 
 //Data Info Requests
 const villageInfo = () => {
   request.createRequest(
-    global.rVillageResourceType,
+    globalsHelpers.requestProps.villageResourceType,
     25,
-    global.rVillageResourceData
+    globalsHelpers.requestProps.villageResourceData
   );
 };
 const gameInfo = () => {
-  request.createRequest("GameDataBatch/getGameData", 4);
+  request.createRequest(globalsHelpers.requestProps.gameBatchType, 4);
 };
 
 //Farm Buildings Upgrade Call
 const timberCampUpgrade = () => {
   request.createRequest(
-    global.rBuildingUpgradeType,
+    globalsHelpers.requestProps.buildingUpgradeType,
     29,
-    global.rUpgradeTimberData
+    globalsHelpers.requestProps.upgradeTimberData
   );
 };
 const clayPitUpgrade = () => {
   request.createRequest(
-    global.rBuildingUpgradeType,
+    globalsHelpers.requestProps.buildingUpgradeType,
     30,
-    global.rUpgradeClayData
+    globalsHelpers.requestProps.upgradeClayData
   );
 };
 const ironMineUpgrade = () => {
   request.createRequest(
-    global.rBuildingUpgradeType,
+    globalsHelpers.requestProps.buildingUpgradeType,
     31,
-    global.rUpgradeIronData
+    globalsHelpers.requestProps.upgradeIronData
   );
 };
 const farmUpgrade = () => {
   request.createRequest(
-    global.rBuildingUpgradeType,
+    globalsHelpers.requestProps.buildingUpgradeType,
     32,
-    global.global.rUpgradeFarmData
+    globalsHelpers.requestProps.upgradeFarmData
   );
 };
 
