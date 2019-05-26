@@ -1,23 +1,10 @@
 const fs = require("fs");
 
 const keys = require("./keywords");
+const objPath = require("object-path");
 
 let obj = {};
 let json;
-
-function deepFind(obj, path) {
-  var paths = path.split("."),
-    current = obj,
-    i;
-  for (i = 0; i < paths.length; ++i) {
-    if (current[paths[i]] == undefined) {
-      return undefined;
-    } else {
-      current = current[paths[i]];
-    }
-  }
-  return current;
-}
 
 function overrideSettings(inputArray, filename) {
   file = "./data/" + filename + ".json";
@@ -49,4 +36,21 @@ function overrideSettings(inputArray, filename) {
   });
 }
 
+const overrideSpecificSettings = (input, filename, at) => {
+  file = "./data/" + filename + ".json";
+  fs.readFile(file, (err, data) => {
+    if (err) console.log("ERROR: Datei konnte nicht gefunden werden ");
+    else {
+      obj = JSON.parse(data);
+      objPath.set(obj, at, input);
+      at != null && console.log(objPath.get(obj, at));
+      json = JSON.stringify(obj);
+      fs.writeFile(file, json, err => {
+        err && console.log(err);
+      });
+    }
+  });
+};
+
 exports.settings = overrideSettings;
+exports.specificSettings = overrideSpecificSettings;

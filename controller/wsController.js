@@ -29,7 +29,7 @@ const getToken = wsServerLocation => {
 
       switch (obj[1].type) {
         case "Login/success":
-          write.settings(newToken, "userSettings");
+          write.specificSettings(newToken, "userSettings", at);
           console.log("Token stored in Settings");
           break;
         case "System/error":
@@ -66,7 +66,7 @@ const runConn = wsServerLocation => {
         console.log(" ------------- " + obj[1].type);
         console.log();
         if (obj[1].type === "Login/success") {
-          write.settings(objData);
+          //write.settings(objData);
           requests.characterLogin();
         } else if (obj[1].type === "Authentication/characterSelected") {
           write.settings(objData);

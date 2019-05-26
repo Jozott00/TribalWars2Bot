@@ -12,10 +12,10 @@ const wsServerLocation =
 const runApp = () => {
   console.log("----- APP IS RUNNING -----");
   helpers.fileExCheck();
-  helpers.setup();
+  //helpers.setup();
 
   wsController.runConn(wsServerLocation);
-  // wsController.getToken(wsServerLocation);
+  //wsController.getToken(wsServerLocation);
 };
 
 runApp();
