@@ -69,10 +69,10 @@ const runConn = wsServerLocation => {
           //write.settings(objData);
           requests.characterLogin();
         } else if (obj[1].type === "Authentication/characterSelected") {
-          write.settings(objData);
+          write.settings(objData, "settings");
           request.createRequest(global.rGetInfoCharType, 13, {});
         } else if (obj[1].type === "Character/info") {
-          write.settings(objData);
+          write.settings(objData, "settings");
           requests.gameInfo();
         } else if (obj[1].type === "GameDataBatch/gameData") {
           //GAME DATA most of the time not changed
